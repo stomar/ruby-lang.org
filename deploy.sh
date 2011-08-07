@@ -3,11 +3,15 @@
 # assuming a git checkout -b publish was performed from master, with some config edits commited on publish
 git checkout publish
 git checkout -- public
-git rebase master
+git rm -rf public
+git rebase orgin/master
+
+# re-generate static content, with plugins
 jekyll
 git add -A .
 git commit -m "static content update"
 
+# publish to gh-pages
 git checkout gh-pages
 rm -rf *
 for file in `git ls-tree publish public -r --name-only`; do
@@ -16,4 +20,5 @@ done
 git add -A .
 git ci -m "content update"
 git push origin gh-pages
+
 git checkout master
