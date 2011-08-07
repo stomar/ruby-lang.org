@@ -4,7 +4,7 @@
 git checkout publish
 git checkout -- public
 git rm -rf public
-git rebase origin/master
+git merge origin master
 
 # re-generate static content, with plugins
 jekyll
