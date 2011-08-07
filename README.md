@@ -1,12 +1,14 @@
+**Work in progress**.  
+
 **Work in progress**.
-**Work in progress**.
+
 **Work in progress**.
 
 ## Synopsis
 
 This repository is a gem-like Jekyll application for http://www.ruby-lang.org.
 
-This is the "official" port, created by current contributors to ruby-lang.org (that is, the Visual Identity Team (VIT) as some used to call us). Obviousy, other projects are welcomed, but eventually, there should be only one central ("official") website for Ruby, along other community-based resources such as RubySource, Ruby Inside… Eventually, Matz will decide if people are not able to agree.
+This is the "official" port, created by current contributors to ruby-lang.org (that is, the Visual Identity Team (VIT) as some used to call us). Obviously, other projects are welcomed, but eventually, there should be only one central ("official") website for Ruby, along other community-based resources such as RubySource, Ruby Inside… Eventually, Matz will decide if people are not able to agree.
 
 ## Infos
 
@@ -15,8 +17,8 @@ Goals:
 
 * maintenance of ruby-lang.org through Github (this repos or another when it's ready)
 * page editions through pull requests, anyone is invited (whohoo!)
-* (hopefully) easy translations synchronization thx to the git workflow
-* (hopefully) a brand new content, hopefully maintained up-to-date thx to the git workflow
+* (hopefully) easy translations synchronisation thanks to the git workflow
+* (hopefully) a brand new content, hopefully maintained up-to-date thanks to the git workflow
 * a set of tools for maintainers (deploy etc.)
 
 What's been done so far:
@@ -37,7 +39,7 @@ What's missing so far:
 
 ## How to contribute?
 
-This is a git-based workflow. To edit pages, you may fork this project and request your changes to be merged (pull request). Github has a nice live-edit-and-pull-request feature, so one is not forced to clone the repository. If you happen to contribute on a regular basis, you'd join the rubylang Github organization, allowing for commiting and live edits.
+This is a git-based workflow. To edit pages, you may fork this project and request your changes to be merged (pull request). Github has a nice live-edit-and-pull-request feature, so one is not forced to clone the repository. If you happen to contribute on a regular basis, you'd join the rubylang Github Organization, allowing for commiting and live edits.
 
 ## Locally
 
@@ -48,7 +50,7 @@ You may clone the repository and run the application on your local machine. See 
 There are command line tasks for creating new pages and news items. Using those tasks prevents you from messing with the metadata, and ensure a few checks.
 
 ``` bash
-    thor new:page 'en/my/page' 'optionnal title'
+    thor new:page 'en/my/page' 'optional title'
     thor new:post 'Breaking news !'
 ```
 
@@ -63,15 +65,9 @@ Type in `thor list` to see all available tasks. We may turn this into a `rubylan
 
 Required dependencies:
 
-* thor
-* rack
-* jekyll
-* rdiscount
-* RedCloth
-* haml
-* compass
-* rubypants
-* pygments.rb
+```             
+	gem install thor rack jekyll rdiscount RedCloth haml compass rubypants pygments.rb
+```
 
 There is a `.rvmrc`, but feel free to discard it.
 
