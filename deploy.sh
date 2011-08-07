@@ -7,6 +7,7 @@ git rm -rf public
 git pull origin master
 
 # re-generate static content, with plugins
+compass compile source
 jekyll
 git add -A .
 git commit -m "static content update"
