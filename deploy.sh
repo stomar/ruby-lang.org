@@ -11,6 +11,7 @@ compass compile source
 jekyll
 git add -A .
 git commit -m "static content update"
+git push origin publish
 
 # publish to gh-pages
 git checkout gh-pages
