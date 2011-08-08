@@ -3,6 +3,13 @@
 require 'fileutils'
 require 'yaml'
 
+begin
+  require 'bundler'
+  Bundler.setup
+rescue LoadError => e
+  # pass
+end
+
 module RubyLang
   # Shared config mixin used by all Thor namespaced tasks defined below.
   #
