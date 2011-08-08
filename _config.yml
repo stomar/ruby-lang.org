@@ -16,6 +16,7 @@ rubylang:
 locales:
   available: # published translations
   - en
+  - es
   - fr
   en:
     credits: Credits
@@ -75,6 +76,48 @@ locales:
           - url: http://redmine.ruby-lang.org
             text: Issue tracker
             subtext: Report or help solve issues in Ruby.
+  es:
+    credits: Créditos
+    nav:
+    - url: downloads
+      text: Descargas
+    - url: documentation
+      text: Documentación
+    - url: libraries
+      text: Librerías
+    - url: community
+      text: Comunidad
+    - url: about
+      text: Acerca de Ruby
+    menus:
+      - title: Primeros pasos
+        subtitle: Es sencillo!
+        links:
+        - url: http://tryruby.org
+          text: Prueba Ruby en tu navegador
+        - url: downloads
+          text: Descarga Ruby
+        - url: documentation/quickstart
+          text: Ruby en 20 minutos
+      - title: Explora
+        subtitle: un mundo nuevo
+        links:
+          - url: documentation
+            text: Documentacion
+          - url: libraries
+            text: Librerías
+      - title: Participa
+        subtitle: en una comunidad amistosa y en crecimiento
+        links:
+          - url: community/mailing-lists
+            text: Listas de correo
+            subtext: Habla sobre Ruby con desarrolladores al rededor del mundo.
+          - url: community/user-groups
+            text: Grupos de usuarios
+            subtext: Ponte en contacto con otros Rubyistas en tu localidad.
+          - url: http://redmine.ruby-lang.org
+            text: Issue tracker
+            subtext: Reporta problemas de Ruby o ayudá a solucionarlos.
   fr:
     credits: À propos de ce site
     nav:
