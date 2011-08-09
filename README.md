@@ -6,7 +6,7 @@
 
 ## Synopsis
 
-This repository is a gem-like Jekyll application for http://www.ruby-lang.org.
+This repository is a gem-like Jekyll application for http://www.ruby-lang.org. **The preview is at http://ruby.github.com/ruby-lang.org**.
 
 This is the "official" port, created by current contributors to ruby-lang.org (that is, the Visual Identity Team (VIT) as some used to call us). Obviously, other projects are welcomed, but eventually, there should be only one central ("official") website for Ruby, along other community-based resources such as RubySource, Ruby Inside… Eventually, Matz will decide if people are not able to agree.
 
