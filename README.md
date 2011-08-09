@@ -75,5 +75,5 @@ Once every gem is installed:
 
 ``` bash
     thor admin:preview
-    firefox http://localhost:4000
+    open http://localhost:4000
 ```
