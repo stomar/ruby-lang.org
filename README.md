@@ -65,11 +65,17 @@ Type in `thor list` to see all available tasks. We may turn this into a `rubylan
 
 Required dependencies:
 
+``` bash
+    gem install thor rack jekyll rdiscount RedCloth haml compass rubypants pygments.rb
+```
+
+If you use Bundler:
+
 ```
     bundle install
 ```
 
-There is a `.rvmrc`, but feel free to discard it.
+There is a `.rvmrc` that will come handy if you are using RVM.
 
 Once every gem is installed:
 
