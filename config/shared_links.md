@@ -7,7 +7,7 @@
 [pygments.rb]: http://rubygems.org/gems/pygments.rb
 
 # Github
-[chikamichi/ruby-lang.org]: http://github.com/chikamichi/ruby-lang.org
+[ruby/ruby-lang.org]: http://github.com/ruby/ruby-lang.org
 [jekyll]: http://github.com/mojombo/jekyll
 [thor]: https://github.com/wycats/thor/wiki
 

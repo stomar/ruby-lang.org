@@ -7,7 +7,7 @@ sharing: false
 footer: false
 ---
 ruby-lang.org es un esfuerzo de la comunidad y el código está disponible en
-[github][rubylang/ruby-lang.org]. Se utilizan varias herramientas:
+[github][ruby/ruby-lang.org]. Se utilizan varias herramientas:
 
 * [Jekyll][jekyll] para procesar los templates
 * [Octopress][octopress] para los plugins y el diseño general
