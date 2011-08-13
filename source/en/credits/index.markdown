@@ -6,7 +6,7 @@ comments: false
 sharing: false
 footer: false
 ---
-ruby-lang.org is a community effort, which source code is crafted at [github][chikamichi/ruby-lang.org]. Several tools are used:
+ruby-lang.org is a community effort, which source code is crafted at [github][ruby/ruby-lang.org]. Several tools are used:
 
 * [Jekyll][jekyll] for processing the templates
 * [Octopress][octopress] for its plugins and Classic theme

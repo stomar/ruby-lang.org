@@ -6,7 +6,7 @@ comments: false
 sharing: false
 footer: false
 ---
-ruby-lang.org est maintenu par des membres de la communauté Ruby. Le code source est [disponible sur github][chikamichi/ruby-lang.org]. Quelques uns des outils utilisés :
+ruby-lang.org est maintenu par des membres de la communauté Ruby. Le code source est [disponible sur github][ruby/ruby-lang.org]. Quelques uns des outils utilisés :
 
 * [Jekyll][jekyll] pour la génération statique
 * [Octopress][octopress] pour ses plugins et son thème Classic
