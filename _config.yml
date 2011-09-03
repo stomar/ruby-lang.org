@@ -14,7 +14,7 @@ rubylang:
   new_page_ext:   markdown  # default new page file extension when using the new_page task
 
 locales:
-  available: # published translations
+  available: # *published* translations
   - en
   - es
   - fr
