@@ -1,6 +1,34 @@
 ---
-layout: default
-footer: false
-locale: en
+layout: nil
 ---
-{% render_partial en/_index.html %}
+<html>
+  <head>
+    <script type="text/javascript">
+      var languages = {
+        "en-US" : "en",
+        "bg"    : "bg",
+        "de-de" : "de",
+        "de"    : "de",
+        "es-es" : "es",
+        "es"    : "es",
+        "fr-FR" : "fr",
+        "fr"    : "fr",
+        "id"    : "id",
+        "it-IT" : "it",
+        "it"    : "it",
+        "ja"    : "ja",
+        "ko-kr" : "ko",
+        "ko"    : "ko",
+        "pl"    : "pl",
+        "tr"    : "tr",
+        "zh_cn" : "zh_cn",
+        "zh_TW" : "zh_TW"
+      };
+
+      var language = languages[window.navigator.language];
+      if (language === null) language = 'en';
+
+      document.location = "/" + language;
+    </script>
+  </head>
+</html>
