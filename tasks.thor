@@ -151,7 +151,7 @@ module RubyLang
     def generate
       say "## Generating site with Jekyll"
       # TODO: add a config merger
-      in_root { run "jekyll" }
+      in_root { run "compass compile source && jekyll" }
       # TODO: run tests?
       say '## Done. Site was generated in _site'
     end

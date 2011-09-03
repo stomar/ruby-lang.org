@@ -11,8 +11,7 @@ git rm -rf public
 git pull origin master
 
 # Re-generate the static content, using our plugins.
-compass compile source
-jekyll
+thor admin:generate
 
 # Commit & push the current publish's state.
 git add -A .
