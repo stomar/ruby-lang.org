@@ -13,6 +13,7 @@ rubylang:
   new_post_ext:   markdown  # default new post file extension when using the new_post task
   new_page_ext:   markdown  # default new page file extension when using the new_page task
 
+# TODO: maybe externalize this...
 locales:
   available: # *published* translations
   - en
@@ -178,9 +179,9 @@ locales:
             subtext: aidez à corriger et/ou améliorer Ruby.
 
 url: http://www.ruby-lang.org
-title: Ruby
+title: Ruby Programming Language
 subtitle: A Programmer's Best Friend
-author: Ruby
+author: Ruby Community
 simple_search: http://google.com/search
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)

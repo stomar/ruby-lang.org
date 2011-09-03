@@ -1,10 +1,6 @@
 ---
 layout: page
 title: "About"
-date: 2011-08-05 22:04
-comments: false
-sharing: false
-footer: false
 ---
 Wondering why Ruby is so popular? Its fans call it a beautiful, artful
 language. And yet, they say it’s handy and practical. What gives?
