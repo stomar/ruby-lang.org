@@ -3,3 +3,4 @@ source/.sass-cache
 _code_cache
 Gemfile.lock
 .DS_Store
+source/images/Ruby_logo.svg
