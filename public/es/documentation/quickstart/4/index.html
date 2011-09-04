@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ruby Programming Language – Ruby en veinte minutos (4/4)</title>
+  <meta name="author" content="Ruby Community">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- meta -->
+  
+
+  <!-- scripts -->
+  <link rel="canonical" href="http://www.ruby-lang.org/es/documentation/quickstart/4/index.html"/>
+  <link href="/favicon.ico" rel="shortcut icon" />
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <link href="/atom.xml" rel="alternate" title="Ruby Programming Language" type="application/atom+xml"/>
+  
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body  >
+  <div id="fixed-nav">
+    <nav role=navigation>
+
+
+<a class="to-home" href="/es"><img class="logo" src="/images/ruby.png" /></a>
+<ul role=main-navigation>
+  
+  <li><a href="/es/downloads/">Descargas</a></li>
+  
+  <li><a href="/es/documentation/">Documentación</a></li>
+  
+  <li><a href="/es/libraries/">Librerías</a></li>
+  
+  <li><a href="/es/community/">Comunidad</a></li>
+  
+  <li><a href="/es/about/">Acerca de Ruby</a></li>
+  
+</ul>
+
+</nav>
+  </div>
+  <header><hgroup>
+  <div id="langs">
+    
+    <a href="/en/documentation/quickstart/4/index.html">en</a>
+    
+    <a href="/es/documentation/quickstart/4/index.html">es</a>
+    
+    <a href="/fr/documentation/quickstart/4/index.html">fr</a>
+    
+  </div>
+  <a href="/es"></a>
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">Ruby en veinte minutos (4/4)</h1>
+  </header>
+  <p>Así que, investigando nuestro programa, notarás que las primeras lineas
+comienzan con un numeral (#). En Ruby, todo lo que esté detrás de un numeral es
+un comentario y es ignorado por el intérprete. La primer linea del archivo es
+un caso especial y en los sistemas operativos del estilo Unix determina cómo
+ejecutar el archivo. El resto de los comentarios están únicamente para aportar
+claridad al significado del código.</p>
+
+<p>Nuestro método <code>decir_hola</code> se ha vuelto un poco más complicado:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+<span class='line'>13</span>
+<span class='line'>14</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="c1"># Decirle hola a todos</span>
+</div><div class='line'><span class="k">def</span> <span class="nf">decir_hola</span>
+</div><div class='line'>  <span class="k">if</span> <span class="vi">@nombres</span><span class="o">.</span><span class="n">nil?</span>
+</div><div class='line'>    <span class="nb">puts</span> <span class="s2">&quot;...&quot;</span>
+</div><div class='line'>  <span class="k">elsif</span> <span class="vi">@nombres</span><span class="o">.</span><span class="n">respond_to?</span><span class="p">(</span><span class="s2">&quot;each&quot;</span><span class="p">)</span>
+</div><div class='line'>    <span class="c1"># @nombres es una lista de algĂşn tipo,</span>
+</div><div class='line'>    <span class="c1"># ÂĄasĂ­ que podemos iterar!</span>
+</div><div class='line'>    <span class="vi">@nombres</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">nombre</span><span class="o">|</span>
+</div><div class='line'>      <span class="nb">puts</span> <span class="s2">&quot;Hola </span><span class="si">#{</span><span class="n">nombre</span><span class="si">}</span><span class="s2">&quot;</span>
+</div><div class='line'>    <span class="k">end</span>
+</div><div class='line'>  <span class="k">else</span>
+</div><div class='line'>    <span class="nb">puts</span> <span class="s2">&quot;Hola </span><span class="si">#{</span><span class="vi">@nombres</span><span class="si">}</span><span class="s2">&quot;</span>
+</div><div class='line'>  <span class="k">end</span>
+</div><div class='line'><span class="k">end</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Ahora usa el atributo <code>@nombres</code> para tomar decisiones. Si es nil, sólo imprime
+tres puntos. No hay razón para saludar a nadie, ¿cierto?</p>
+
+<h2>Iterando</h2>
+
+<p>Si el objeto <code>@nombres</code> responde al método <code>each</code>, es algo sobre lo que se
+puede iterar, así que iteramos entre sus elementos y saludamos a cada uno de
+sus integrantes. Finalmente, si <code>@nombres</code> es otra cosa, dejamos que
+automáticamente se convierta en un string y usamos el saludo por defecto.</p>
+
+<p>Veamos ese iterador en más detalle:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="vi">@nombres</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">nombre</span><span class="o">|</span>
+</div><div class='line'>  <span class="nb">puts</span> <span class="s2">&quot;Hola </span><span class="si">#{</span><span class="n">nombre</span><span class="si">}</span><span class="s2">&quot;</span>
+</div><div class='line'><span class="k">end</span>
+</div></code></pre></td></tr></table></div>
+
+<p>El método <code>each</code> acepta un bloque de código y lo ejecuta por cada elemento de
+la lista, y el código entre <code>do</code> y <code>end</code> es el bloque en sí mismo. Un bloque es
+como una función anónima o <code>lambda</code>. La variable entre los pipes (|) es el
+parámetro para este bloque.</p>
+
+<p>Lo que sucede es que por cada elemento en la lista, <code>nombre</code> va tomando su
+valor y se ejecuta la expresión <code>puts "Hola #{nombre}"</code> con ese nombre.</p>
+
+<p>Muchos otros lenguajes de programación manejan la iteración de una lista usando
+la clásica sintaxis <code>for</code>, que en C se ve así:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='c'><div class='line'><span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">cantidad_de_elementos</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</div><div class='line'>  <span class="n">hacer_algo_con</span><span class="p">(</span><span class="n">elementos</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</div><div class='line'><span class="p">}</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Esto funciona, pero no es muy elegante. Necesitas una variable descartable como
+<code>i</code>, averiguar la cantidad de elementos de la lista, y explicar cómo
+recorrerla. La costumbre Ruby (The Ruby Way) es mucho más elegante, todos los
+detalles de infraestructura se ocultan en el método <code>each</code>, todo lo que
+necesitas hacer es decirle qué hacer con cada elemento. Internamente, el método
+<code>each</code> llamará <code>yield "Alberto"</code>, después <code>yield "Beatriz"</code>, después <code>yield
+"Carlos"</code>, y así sucesivamente.</p>
+
+<h2>Los bloques, una de las funcionalidades más potentes de Ruby</h2>
+
+<p>El poder real de los bloques se disfruta al trabajar con cosas más complicadas
+que las listas. Más allá de manejar los detalles de infraestructura dentro del
+método, también puedes manejar la inicialización, la finalización, y los
+errores &#8211; todos ocultos y simplificados frente a las preocupaciones del
+desarrollador.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="c1"># Decirle adi贸s a todos</span>
+</div><div class='line'><span class="k">def</span> <span class="nf">decir_adios</span>
+</div><div class='line'>  <span class="k">if</span> <span class="vi">@nombres</span><span class="o">.</span><span class="n">nil?</span>
+</div><div class='line'>    <span class="nb">puts</span> <span class="s2">&quot;...&quot;</span>
+</div><div class='line'>  <span class="k">elsif</span> <span class="vi">@nombres</span><span class="o">.</span><span class="n">respond_to?</span><span class="p">(</span><span class="s2">&quot;join&quot;</span><span class="p">)</span>
+</div><div class='line'>    <span class="c1"># Juntar los elementos de la lista</span>
+</div><div class='line'>    <span class="c1"># usando la coma como separador</span>
+</div><div class='line'>    <span class="nb">puts</span> <span class="s2">&quot;Adi贸s </span><span class="si">#{</span><span class="vi">@nombres</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">. Vuelvan pronto.&quot;</span>
+</div><div class='line'>  <span class="k">else</span>
+</div><div class='line'>    <span class="nb">puts</span> <span class="s2">&quot;Adi贸s </span><span class="si">#{</span><span class="vi">@nombres</span><span class="si">}</span><span class="s2">. Vuelve pronto.&quot;</span>
+</div><div class='line'>  <span class="k">end</span>
+</div><div class='line'><span class="k">end</span>
+</div></code></pre></td></tr></table></div>
+
+<p>El método <code>decir_adios</code> no usa <code>each</code>, en vez de eso se fija si <code>@nombres</code>
+responde al método <code>join</code>, y si es así, lo usa. Si no es así, simplemente
+imprime la variable como un string. Esta práctica de no preocuparse sobre el
+<em>tipo</em> de objeto de una variable, y simplemente depender de los métodos que
+esta soporta, es conocida como &#8220;Duck Typing&#8221;. El beneficio es que no limita
+innecesariamente los tipos de variables que son soportados. Si alguien inventa
+un nuevo tipo de lista, siempre y cuando implemente el método <code>join</code> con la
+misma semántica que otras listas, todo funcionará como fue planeado.</p>
+
+<h2>Arrancando el Script</h2>
+
+<p>Así que eso es la clase MegaAnfitrion, el resto del archivo sólo llama a los
+métodos de la clase. Hy un último truco para tener en cuenta, y es la linea:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="k">if</span> <span class="bp">__FILE__</span> <span class="o">==</span> <span class="vg">$0</span>
+</div></code></pre></td></tr></table></div>
+
+<p><code>__FILE__</code> es la variable mágica que contiene el nombre del archivo que se está
+ejecutando en ese momento. <code>$0</code> es el nombre del archivo usado para iniciar el
+programa. Esta verificación dice &#8220;si este es el archivo principal&#8230;&#8221;. Esto
+permite que un archivo sea utilizado como una biblioteca, y no ejecutar código
+en ese contexto. Pero si el archivo está siendo usado como un ejecutable,
+entonces ejecuta ese código.</p>
+
+<h2>Considérate iniciado</h2>
+
+<p>Eso es todo en este rápido paseo por Ruby. Hay mucho más por explorar, las
+estructuras de control diferentes que ofrece Ruby; el uso e los bloques y
+<code>yield</code>; módulos como mixins; y más. Espero que esta pequeña muestra de Ruby te
+despierte el interés por saber más.</p>
+
+<p>Si es así, por favor dirígete a nuestra area de
+<a href="/es/documentation/">Documentación</a>, donde encontrarás vínculos a cursos y
+manuales, todos disponibles gratuitamente en internet.</p>
+
+<p>O si realmente te gustaría sumergirte en un libro, busca en el <a href="http://www.ruby-doc.org/bookstore">listado de libros</a> los títulos disponibles para venta en linea o en tu tienda favorita.</p>
+
+  
+</article>
+
+</div>
+
+<aside role=sidebar>
+  
+    
+
+
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Primeros pasos</span>
+    Es sencillo!
+  </div>
+  <ul class="nav">
+  
+  
+    
+      
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/http://tryruby.org">Prueba Ruby en tu navegador</a>
+      
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/es/downloads">Descarga Ruby</a>
+      
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/es/documentation/quickstart">Ruby en 20 minutos</a>
+      
+    </li>
+  
+  </ul>
+</section>
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Explora</span>
+    un mundo nuevo
+  </div>
+  <ul class="nav">
+  
+  
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/es/documentation">Documentacion</a>
+      
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/es/libraries">Librerías</a>
+      
+    </li>
+  
+  </ul>
+</section>
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Participa</span>
+    en una comunidad amistosa y en crecimiento
+  </div>
+  <ul class="nav">
+  
+  
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/es/community/mailing-lists">Listas de correo</a>
+      <span>Habla sobre Ruby con desarrolladores al rededor del mundo.</span>
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/es/community/user-groups">Grupos de usuarios</a>
+      <span>Ponte en contacto con otros Rubyistas en tu localidad.</span>
+    </li>
+  
+  
+    
+      
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/http://redmine.ruby-lang.org">Issue tracker</a>
+      <span>Reporta problemas de Ruby o ayudá a solucionarlos.</span>
+    </li>
+  
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer>
+
+
+<nav role=navigation>
+
+
+<a class="to-home" href="/es"><img class="logo" src="/images/ruby.png" /></a>
+<ul role=main-navigation>
+  
+  <li><a href="/es/downloads/">Descargas</a></li>
+  
+  <li><a href="/es/documentation/">Documentación</a></li>
+  
+  <li><a href="/es/libraries/">Librerías</a></li>
+  
+  <li><a href="/es/community/">Comunidad</a></li>
+  
+  <li><a href="/es/about/">Acerca de Ruby</a></li>
+  
+</ul>
+
+</nav>
+<a href="/es/credits">Créditos</a>
+
+</footer>
+</body>
+</html>
