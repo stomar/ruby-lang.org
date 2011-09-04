@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name = "rubylang"
-  s.author = "Jean-Denis Vauguet <jd@vauguet.fr>"
-  s.email = "jd@vauguet.fr"
-  s.homepage = "http://www.github.com/chikamichi/ruby-lang.org"
+  s.authors = ["Jean-Denis Vauguet <jd@vauguet.fr>"]
+  s.email = "webmaster@ruby-lang.org"
+  s.homepage = "http://www.github.com/ruby/ruby-lang.org"
   s.summary = "http://www.ruby-lang.org source code"
   s.description = "This is the Jekyll application powering http://www.ruby-lang.org."
   s.files = Dir["lib/**/*"] + ["MIT-LICENSE", "tasks.thor", "README.md", "CHANGELOG.md"]
