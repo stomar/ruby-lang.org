@@ -55,7 +55,7 @@ locales:
             text: Documentation
           - url: http://www.amazon.com/s/ref=sr_nr_n_5?ie=UTF8&rs=1000&keywords=Ruby&rh=i%3Aaps%2Ck%3ARuby%2Ci%3Astripbooks%2Cn%3A1000%2Cn%3A5
             text: Books
-          - url: Libraries
+          - url: libraries
             text: Libraries
           - url: documentation/success-stories
             text: Success Stories
