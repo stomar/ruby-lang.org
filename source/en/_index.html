@@ -2,16 +2,6 @@
 {% if locale == "" %}{% assign locale = "en" %}{% endif %}
 {% if page.locale %}{% assign locale = page.locale %}{% endif %}
 <div class="blog-index">
-  <div id="excerpt">
-    <div class="code-sample">
-      {% include code_sample.markdown %}
-    </div>
-    <div class="hint">
-      <h2>Ruby</h2>
-      <p>is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.</p>
-      <p class="more"><a href="{{ locale }}/documentation">Read more…</a></p>
-    </div>
-  </div>
   {% assign index = true %}
   {% for post in paginator.posts %}
   {% assign content = post.content %}

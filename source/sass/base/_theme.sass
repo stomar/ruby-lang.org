@@ -86,12 +86,10 @@ aside[role=sidebar] a
   +link-colors($sidebar-link-color, $sidebar-link-color-hover, $sidebar-link-color, $sidebar-link-color, $sidebar-link-color)
 
 html
-  //background: $page-bg
-  background: $page-bg image-url('line-tile.png') top left
+  +background(image-url("honey.png"), linear-gradient(top, #2E0000, #880000 400px, #880000))
 
 body
   > div
-    background: $sidebar-bg $noise-bg
     border-bottom: 1px solid $page-border-bottom
     > div
       background: $main-bg

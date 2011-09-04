@@ -31,8 +31,8 @@ body
   max-width: $max-page-width
   position: relative
   margin: 0 auto
-  +box-shadow(black 0 0 30px)
-  > header, > nav, > footer, #content > article, #content > div > article, #content > div > section, #content #excerpt, nav[role=pagination]
+
+  > header, > nav, > footer, #content > article, #content > div > article, #content > div > section, #excerpt, nav[role=pagination]
     @extend .group
     padding-left: $pad-min
     padding-right: $pad-min
@@ -45,53 +45,14 @@ body
     @media only screen and (min-width: 992px)
       padding-left: $pad-wide
       padding-right: $pad-wide
-  > header, #content #excerpt
-    font-size: 1em
-    padding-top: 1.5em
-    padding-bottom: 1.5em
-  > #fixed-nav
-    position: fixed
-    top: 0
-    width: $page-width
-    max-width: $max-page-width
-    height: 3.1em
-    z-index: 999
-    +background(image-url("line-tile.png"), linear-gradient(left, lighten($footer-bg, 10), darken($footer-bg, 20), $footer-bg))
   a.to-home
     outline: none
 
-#excerpt
-  +background(linear-gradient(left, #164271, #FDFDFD))
-  color: white
-  .hint
-    width: auto
-    padding-top: 2em
-    h2
-      font-size: 2.5em
-    p
-      color: #E9E9E9
-      &.more
-        font-weight: bold
-    a
-      color: white
-      &:hover
-        color: #E9E9E9
-  .code-sample
-    float: right
-    width: 350px
-    padding-left: 3em
-    .highlight
-      +background(image-url("line-tile.png") top left, $page-bg)
-      +border-radius(100%)
-      +single-box-shadow(darken(#164271, 10), 0, 0, 20px, 5px, inset)
-      border: 3px solid #F1F3F5 !important
-      padding: 3em 0
-      code
-        background: transparent !important
-      td.gutter
-        display: none
-      td.code
-        padding-left: 60px
+#main
+  background: $sidebar-bg $noise-bg
+
+#main, #main > header
+  +box-shadow(black 0 0 30px)
 
 #content
   > div, > article
@@ -166,8 +127,8 @@ body.sidebar-footer
       +collapse-sidebar
 
 @media only screen and (min-width: 992px)
-  body > header
-    font-size: 1.3em
+  body
+    font-size: 1em
   #content
     margin-right: $sidebar-width-wide
   #content

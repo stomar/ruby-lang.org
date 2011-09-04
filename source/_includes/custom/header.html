@@ -1,8 +1,30 @@
+{% capture locale %}{{ page.url | truncate: 3, "" | remove: "/" }}{% endcapture %}
+{% if locale == "" %}{% assign locale = "en" %}{% endif %}
+{% if page.locale %}{% assign locale = page.locale %}{% endif %}
 <hgroup>
-  <div id="langs">
-    {% for lang in site.locales.available %}
-    <a href="{{ site.root }}{{ lang }}/{{ page.url | no_lang }}">{{ lang }}</a>
-    {% endfor %}
+  <div id="main-logo">
+    <a href="/{{ locale }}"></a>
+    <span>Ruby</span>
   </div>
+  <div id="download">
+    <p>Latest version: 1.9.2</p>
+    <div>Download</div>
+  </div>
+  <div id="excerpt">
+    <div class="hint">
+      <div>
+        <h2>Ruby</h2>
+        <p>
+          a dynamic, reflective, general-purpose object-oriented programming language —
+          <span class="more"><a href="/{{ locale }}/about">Read more…</a></span>
+        </p>
+      <div>
+    </div>
+  </div>
+  <!--<div id="langs">-->
+    <!--{% for lang in site.locales.available %}-->
+    <!--<a href="/{{ locale }}/{{ page.url | no_lang }}">{{ lang }}</a>-->
+    <!--{% endfor %}-->
+  <!--</div>-->
   <a href="{{ site.root }}{{ locale }}"></a>
 </hgroup>
