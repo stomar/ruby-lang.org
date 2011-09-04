@@ -57,37 +57,38 @@
 </head>
 
 <body  >
-  <div id="fixed-nav">
-    <nav role=navigation>
+  <header>
 
 
-<a class="to-home" href="/es"><img class="logo" src="/images/ruby.png" /></a>
-<ul role=main-navigation>
-  
-  <li><a href="/es/downloads/">Descargas</a></li>
-  
-  <li><a href="/es/documentation/">Documentación</a></li>
-  
-  <li><a href="/es/libraries/">Librerías</a></li>
-  
-  <li><a href="/es/community/">Comunidad</a></li>
-  
-  <li><a href="/es/about/">Acerca de Ruby</a></li>
-  
-</ul>
-
-</nav>
+<hgroup>
+  <div id="main-logo">
+    <a href="/es"></a>
+    <span>Ruby</span>
   </div>
-  <header><hgroup>
-  <div id="langs">
-    
-    <a href="/en/index.html">en</a>
-    
-    <a href="/es/index.html">es</a>
-    
-    <a href="/fr/index.html">fr</a>
-    
+  <div id="download">
+    <p>Latest version: 1.9.2</p>
+    <div>Download</div>
   </div>
+  <div id="excerpt">
+    <div class="hint">
+      <div>
+        <h2>Ruby</h2>
+        <p>
+          a dynamic, reflective, general-purpose object-oriented programming language —
+          <span class="more"><a href="/es/about">Read more…</a></span>
+        </p>
+      <div>
+    </div>
+  </div>
+  <!--<div id="langs">-->
+    <!---->
+    <!--<a href="/es/index.html">en</a>-->
+    <!---->
+    <!--<a href="/es/index.html">es</a>-->
+    <!---->
+    <!--<a href="/es/index.html">fr</a>-->
+    <!---->
+  <!--</div>-->
   <a href="/es"></a>
 </hgroup>
 
@@ -98,38 +99,6 @@
 
 
 <div class="blog-index">
-  <div id="excerpt">
-    <div class="code-sample">
-      <!-- this line is important, don't remove it -->
-<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
-<span class='line'>2</span>
-<span class='line'>3</span>
-<span class='line'>4</span>
-<span class='line'>5</span>
-<span class='line'>6</span>
-<span class='line'>7</span>
-<span class='line'>8</span>
-<span class='line'>9</span>
-<span class='line'>10</span>
-</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">cities</span>  <span class="o">=</span> <span class="sx">%w[ London</span>
-</div><div class='line'><span class="sx">              Oslo</span>
-</div><div class='line'><span class="sx">              Paris</span>
-</div><div class='line'><span class="sx">              Amsterdam</span>
-</div><div class='line'><span class="sx">              Berlin ]</span>
-</div><div class='line'><span class="n">visited</span> <span class="o">=</span> <span class="sx">%w[Berlin Oslo]</span>
-</div><div class='line'> <span class="nb">puts</span> <span class="s2">&quot;I still need &quot;</span> <span class="o">+</span>
-</div><div class='line'>     <span class="s2">&quot;to visit the &quot;</span> <span class="o">+</span>
-</div><div class='line'>     <span class="s2">&quot;following cities:&quot;</span><span class="p">,</span>
-</div><div class='line'>     <span class="n">cities</span> <span class="o">-</span> <span class="n">visited</span>
-</div></code></pre></td></tr></table></div>
-
-    </div>
-    <div class="hint">
-      <h2>Ruby</h2>
-      <p>is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.</p>
-      <p class="more"><a href="es/documentation">Read more…</a></p>
-    </div>
-  </div>
   
   
   <nav role="pagination">
@@ -291,7 +260,6 @@
 <nav role=navigation>
 
 
-<a class="to-home" href="/es"><img class="logo" src="/images/ruby.png" /></a>
 <ul role=main-navigation>
   
   <li><a href="/es/downloads/">Descargas</a></li>
