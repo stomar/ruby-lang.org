@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title></title>
+  <link href="http://www.ruby-lang.org/atom.xml" rel="self"/>
+  <link href="http://www.ruby-lang.org/"/>
+  <updated>2011-09-09T01:33:06+02:00</updated>
+  <id>http://www.ruby-lang.org/</id>
+  <author>
+    <name>Ruby Community</name>
+    
+  </author>
+
+  
+  <entry>
+    <title>ConFoo 2012: Call for Papers is Now Open!</title>
+    <link href="http://www.ruby-lang.org/blog/2011/08/11/confoo-2012-call-for-papers-is-now-open/"/>
+    <updated>2011-08-11T23:26:00+02:00</updated>
+    <id>http://www.ruby-lang.org/blog/2011/08/11/confoo-2012-call-for-papers-is-now-open</id>
+    <content type="html">&lt;p&gt;We are looking for the best speakers willing to share their skills and experience with developers and managers.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+
+&lt;p&gt;This year, ConFoo is dedicated to software development, project management and best practices.&lt;/p&gt;
+
+&lt;p&gt;The technical part covers different aspects of Web development such as: Ruby , PHP, Python, .Net, Java, security, content management systems, frameworks, databases, system administration, Web standards, mobile development, accessibility and software architecture.&lt;/p&gt;
+
+&lt;p&gt;The management and best practices parts includes: project management, agile methodology, referencing (SEO), Web marketing analysis, social networking, and start-ups.&lt;/p&gt;
+
+&lt;p&gt;The conference will be held in Montreal from February 29th to March 2nd, 2012 at the prestigious Hotel Hilton Bonaventure and will be preceded by a few days of training.&lt;/p&gt;
+
+&lt;p&gt;Talk proposals must received by September 2nd, 2011.&lt;/p&gt;
+
+&lt;p&gt;Visit &lt;a href=&quot;http://confoo.ca&quot;&gt;ConFoo.ca&lt;/a&gt; in order to submit a proposal.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Ruby 1.9.3 preview1 has been released</title>
+    <link href="http://www.ruby-lang.org/blog/2011/08/01/ruby-1-9-3-preview1-has-been-released/"/>
+    <updated>2011-08-01T00:42:00+02:00</updated>
+    <id>http://www.ruby-lang.org/blog/2011/08/01/ruby-1-9-3-preview1-has-been-released</id>
+    <content type="html">&lt;p&gt;Ruby 1.9.3 preview1 has been released. This is a first preview of next version and there're still minor known issues. But it will be fixed in next release, Ruby 1.9.3-p0.&lt;/p&gt;
+
+&lt;p&gt;See ChangeLogs and NEWS for the descriptions.&lt;/p&gt;
+
+&lt;p&gt;Ruby Inside has published a review of this release.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+
+&lt;h2&gt;Downloads&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;URL:http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-preview1.tar.bz2&gt;
+&lt;strong&gt; SIZE: 9507455 bytes
+&lt;/strong&gt; MD5: 7d93dc773c5824f05c6e6630d8c4bf9b
+** SHA256: a15d7924d74a45ffe48d5421c5fc4ff83b7009676054fa5952b890711afef6fc&lt;/li&gt;
+&lt;li&gt;&amp;lt;URL:http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-preview1.tar.gz&gt;
+&lt;strong&gt; SIZE: 12186410 bytes
+&lt;/strong&gt; MD5: 0f0220be4cc7c51a82c1bd8f6a0969f3
+** SHA256: 75c2dd57cabd67d8078a61db4ae86b22dc6f262b84460e5b95a0d8a327b36642&lt;/li&gt;
+&lt;li&gt;&amp;lt;URL:http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-preview1.zip&gt;
+&lt;strong&gt; SIZE: 13696708 bytes
+&lt;/strong&gt; MD5: 960e08b2dc866c9987f17d0480de63a1
+** SHA256: 249483f88156b4ae65cd45742c6f6316660f793b78739657596c63b86f76aaeb&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;Differences from previous version&lt;/h2&gt;
+
+&lt;p&gt;Previous Ruby versions was licensed under &quot;GPLv2&quot; and &quot;Ruby&quot; license but &quot;2-clause BSDL&quot;(AKA Simplfied BSD License) and &quot;Ruby&quot; lisence been replacement of them.&lt;/p&gt;
+
+&lt;h3&gt;Encoding&lt;/h3&gt;
+
+&lt;p&gt;SJIS changed to alias for Windows-31J, instead of Shift_JIS.&lt;/p&gt;
+
+&lt;h3&gt;Standard Libraries&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;io/console: Add capabilities to IO instances.&lt;/li&gt;
+&lt;li&gt;openssl&lt;/li&gt;
+&lt;li&gt;test/unit: supports parallel test&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Other changes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;pathname and date are re-implemented on current preview.&lt;/li&gt;
+&lt;li&gt;A purpose of VM locking is changed.&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+  </entry>
+  
+  <entry>
+    <title>Ruby 1.9.2-p290 is released</title>
+    <link href="http://www.ruby-lang.org/blog/2011/07/15/ruby-1-9-2-p290-is-released/"/>
+    <updated>2011-07-15T00:45:00+02:00</updated>
+    <id>http://www.ruby-lang.org/blog/2011/07/15/ruby-1-9-2-p290-is-released</id>
+    <content type="html">&lt;p&gt;Ruby 1.9.2-p290 is released.&lt;/p&gt;
+
+&lt;p&gt;This release doesn't include any security fixes, but many bugs are fixed in this release.&lt;/p&gt;
+
+&lt;p&gt;See ChangeLog for details.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+
+&lt;p&gt;Downloads&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;URL:http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p290.tar.bz2&gt;
+SIZE:
+8811237 bytes
+MD5:
+096758c3e853b839dc980b183227b182
+SHA256:
+403b3093fbe8a08dc69c269753b8c6e7bd8f87fb79a7dd7d676913efe7642487
+&amp;lt;URL:http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p290.tar.gz&gt;
+SIZE:
+11182217 bytes
+MD5:
+604da71839a6ae02b5b5b5e1b792d5eb
+SHA256:
+1cc817575c4944d3d78959024320ed1d5b7c2b4931a855772dacad7c3f6ebd7e
+&amp;lt;URL:http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p290.zip&gt;
+SIZE:
+12600100 bytes
+MD5:
+6060b410aa15d09ac13b93033b8b5c66
+SHA256:
+bce3d1c8c78fbafb6a0d67df2b8dec5322301f7b4b0f7594656ad689e9cb461d&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Ruby 1.8.7-p352 released</title>
+    <link href="http://www.ruby-lang.org/blog/2011/07/02/ruby-1-8-7-p352-released/"/>
+    <updated>2011-07-02T00:50:00+02:00</updated>
+    <id>http://www.ruby-lang.org/blog/2011/07/02/ruby-1-8-7-p352-released</id>
+    <content type="html">&lt;p&gt;Ruby 1.8.7 was released on June 1st, 2008. In commemoration of the thrid anniversary of Ruby 1.8.7, we have a new patchlevel release today. It includes several bug fixes. For the detail please read the ChangeLog.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+
+&lt;p&gt;ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p352.tar.gz
+ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p352.tar.bz2
+ftp://ftp.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p352.zip
+Checksums:&lt;/p&gt;
+
+&lt;p&gt;MD5(ruby-1.8.7-p352.tar.gz)= 0c33f663a10a540ea65677bb755e57a7
+SHA256(ruby-1.8.7-p352.tar.gz)= 2325b9f9ab2af663469d057c6a1ef59d914a649808e9f6d1a4877c8973c2dad0
+SIZE(ruby-1.8.7-p352.tar.gz)= 4894181&lt;/p&gt;
+
+&lt;p&gt;MD5(ruby-1.8.7-p352.tar.bz2)= 0c61ea41d1b1183b219b9afe97f18f52
+SHA256(ruby-1.8.7-p352.tar.bz2)= 9df4e9108387f7d24a6ab8950984d0c0f8cdbc1dad63194e744f1a176d1c5576
+SIZE(ruby-1.8.7-p352.tar.bz2)= 4207576&lt;/p&gt;
+
+&lt;p&gt;MD5(ruby-1.8.7-p352.zip)= 6f745837e50a86fe0c924dccfa65b4ec
+SHA256(ruby-1.8.7-p352.zip)= 24fd9eb8734fd81a51806d16bf3a5624e87a58b877a9a9affb1f6c6158cad5c9
+SIZE(ruby-1.8.7-p352.zip)= 5993612
+Thank you for all the efforts you made in these three years.&lt;/p&gt;
+</content>
+  </entry>
+  
+</feed>

@@ -1,8 +1,0 @@
-{% capture locale %}{{ page.url | truncate: 3, "" | remove: "/" }}{% endcapture %}
-{% if locale == "" %}{% assign locale = "en" %}{% endif %}
-{% if page.locale %}{% assign locale = page.locale %}{% endif %}
-<ul role=main-navigation>
-  {% for link in site.locales[locale].nav %}
-  <li><a href="{{ site.root }}{{ locale }}/{{ link.url }}/">{{ link.text }}</a></li>
-  {% endfor %}
-</ul>

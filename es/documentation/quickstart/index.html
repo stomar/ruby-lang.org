@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ruby Programming Language – Ruby en veinte minutos (1/4)</title>
+  <meta name="author" content="Ruby Community">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- meta -->
+  
+
+  <!-- scripts -->
+  <link rel="canonical" href="http://www.ruby-lang.org/es/documentation/quickstart/index.html"/>
+  <link href="/ruby-lang.org/favicon.ico" rel="shortcut icon" />
+  <link href="/ruby-lang.org/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/ruby-lang.org/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/ruby-lang.org/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <link href="/ruby-lang.org/atom.xml" rel="alternate" title="Ruby Programming Language" type="application/atom+xml"/>
+  
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body  >
+  <header>
+
+
+<hgroup>
+  <div id="main-logo">
+    <a href="/es"></a>
+    <span>Ruby</span>
+  </div>
+  <div id="download">
+    <a href="/es/downloads">
+      <span class="download">Download 1.9.2</span>
+    </a>
+  </div>
+  <div id="excerpt">
+    <div class="hint">
+      <div>
+        <h2>Ruby</h2>
+        <p>
+          A happy programmer's language —
+          <span class="more"><a href="/es/about">Read more…</a></span>
+        </p>
+      <div>
+    </div>
+  </div>
+  <!--<div id="langs">-->
+    <!---->
+    <!--<a href="/es/documentation/quickstart/index.html">en</a>-->
+    <!---->
+    <!--<a href="/es/documentation/quickstart/index.html">es</a>-->
+    <!---->
+    <!--<a href="/es/documentation/quickstart/index.html">fr</a>-->
+    <!---->
+  <!--</div>-->
+  <a href="/ruby-lang.org/es"></a>
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">Ruby en veinte minutos (1/4)</h1>
+  </header>
+  <h2>Introducción</h2>
+
+<p>Este es un pequeño tutorial de Ruby que no debería tomar más de 20 minutos
+completarlo. Se asume que ya tienes instalado Ruby. Si no tienes Ruby
+funcionando en tu PC, <a href="/ruby-lang.org/es/downloads">descárgalo</a> e instálalo antes de
+comenzar.</p>
+
+<h2>Ruby interactivo</h2>
+
+<p>Arranca el IRB.</p>
+
+<ul>
+<li>Si estás usando <em>Mac OS X</em> abre una <code>Terminal</code> y escribe <code>irb</code>, después presiona enter.</li>
+<li>Si estás usando <em>Linux</em>, abre una <code>Terminal</code> y escribe <code>irb</code>, después presiona enter.</li>
+<li>Si estás usando <em>Windows</em>, abre <code>fxri</code> desde la sección Ruby de tu Menú de Inicio.</li>
+</ul>
+
+
+<p>Deberías ver algo así:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">001</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Bien, ahora está abierto. ¿Y ahora qué?</p>
+
+<p>Escribe esto: <code>"Hola Mundo"</code></p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">001</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="s2">&quot;Hola Mundo&quot;</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="s2">&quot;Hola Mundo&quot;</span>
+</div></code></pre></td></tr></table></div>
+
+<h2>¡Ruby te obedeció!</h2>
+
+<p>¿Qué fue lo que pasó? ¿Acaso acabamos de escribir el programa &#8220;Hola Mundo&#8221; más
+corto del mundo? No exactamente. La segunda linea sólo es la forma que tiene
+IRB para decirnos el resultado de la última expresión evaluada. Si queremos que
+el programa escriba &#8220;Hola Mundo&#8221; necesitamos un poco más:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">002</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="s2">&quot;Hola Mundo&quot;</span>
+</div><div class='line'><span class="no">Hola</span> <span class="no">Mundo</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div></code></pre></td></tr></table></div>
+
+<p><code>puts</code> es el comando básico para escribir algo en Ruby.  Pero entonces, ¿qué es
+ese <code>=&gt; nil</code>? Ese es el resultado de la expresión. <code>puts</code> siempre retorna
+<code>nil</code>, que es el valor que significa &#8220;absolutamente nada&#8221; en Ruby.</p>
+
+<h2>Calculadora</h2>
+
+<p>Ya tenemos suficiente para usar IRB como una calculadora básica:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">003</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="mi">3</span><span class="o">+</span><span class="mi">2</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="mi">5</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Tres más dos. Bastante fácil. ¿Y qué tal tres <em>veces</em> dos? Podrías escribirlo,
+es bastante corto, pero también podrías subir y simplemente cambiar lo que ya
+ingresaste. Prueba presionando la <em>flecha hacia arriba</em> en tu teclado y
+verifica si aparece la linea con <code>3+2</code> escrito. Si es así, puedes usar la
+<em>flecha hacia la izquierda</em> para posicionarte junto al signo <code>+</code> y cambiarlo
+por un <code>*</code>.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">004</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="mi">3</span><span class="o">*</span><span class="mi">2</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="mi">6</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Ahora intentemos tres al cuadrado:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">005</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="mi">3</span><span class="o">**</span><span class="mi">2</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="mi">9</span>
+</div></code></pre></td></tr></table></div>
+
+<p>En Ruby <code>**</code> es la forma que tienes para decir &#8220;elevado al&#8221;. ¿Y qué tal si
+quieres hacer lo inverso y encontrar la raíz cuadrada de algo?</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">006</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="no">Math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Bien, esperen, ¿qué fue eso? Si adivinaste, &#8220;fue la forma de averiguar la raíz
+cuadrada de nueve&#8221;, estás en lo cierto. Pero veamos las cosas un poco más de
+cerca. Antes que nada, ¿qué es <code>Math</code>?</p>
+
+<h2>Módulos, agrupa el código por tópicos</h2>
+
+<p><code>Math</code> es un módulo incluido para matemáticas. Los módulos tienen dos roles en
+Ruby. Esto muestra uno de sus roles: agrupar métodos similares bajo un nombre
+familiar. <code>Math</code> también tiene métodos como <code>sin</code> y <code>tan</code>.</p>
+
+<p>Después de <code>Math</code> hay un punto. ¿Cuál es la función del punto? El punto es la
+forma de identificar al receptor de un mensaje. ¿Qué es un mensaje? En este
+caso es <code>sqrt(9)</code>, que significa &#8220;llama al método <code>sqrt</code>&#8221;, abreviación de
+&#8220;square root&#8221; (raíz cuadrada) con el parámetro <code>9</code>.</p>
+
+<p>El resultado de la llamada a este método es el valor <code>3.0</code>. Notarás que no es
+simplemente <code>3</code>. Eso es porque la mayoría de las veces la raíz cuadrada de un
+número no será un número entero, así que el método siempre retorna un número
+flotante.</p>
+
+<p>¿Y qué pasa si queremos recordar el resultado de algunas de estas operaciones?
+Asigna el resultado a una variable.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">007</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">**</span> <span class="mi">2</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="mi">9</span>
+</div><div class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">00</span><span class="mi">8</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">**</span> <span class="mi">2</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="mi">16</span>
+</div><div class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">00</span><span class="mi">9</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="no">Math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="mi">5</span><span class="o">.</span><span class="mi">0</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Por más bueno que esté esto de la calculadora, nos estamos alejando del
+tradicional mensaje <code>Hola Mundo</code> en el que se supone que los cursos para
+principiantes deben enfocarse&#8230; <a href="/ruby-lang.org/es/documentation/quickstart/2">así que volvamos a eso</a>.</p>
+
+  
+    <footer>
+      
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.ruby-lang.org/es/documentation/quickstart/index.html" data-via="" data-counturl="http://www.ruby-lang.org/es/documentation/quickstart/index.html" >Tweet</a>
+  
+  
+  <g:plusone size="medium"></g:plusone>
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+</div>
+
+<aside role=sidebar>
+  
+    
+
+
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Primeros pasos</span>
+    Es sencillo!
+  </div>
+  <ul class="nav">
+  
+  
+    
+      
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/ruby-lang.org/http://tryruby.org">Prueba Ruby en tu navegador</a>
+      
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/ruby-lang.org/es/downloads">Descarga Ruby</a>
+      
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/ruby-lang.org/es/documentation/quickstart">Ruby en 20 minutos</a>
+      
+    </li>
+  
+  </ul>
+</section>
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Explora</span>
+    un mundo nuevo
+  </div>
+  <ul class="nav">
+  
+  
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/ruby-lang.org/es/documentation">Documentacion</a>
+      
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/ruby-lang.org/es/libraries">Librerías</a>
+      
+    </li>
+  
+  </ul>
+</section>
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Participa</span>
+    en una comunidad amistosa y en crecimiento
+  </div>
+  <ul class="nav">
+  
+  
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/ruby-lang.org/es/community/mailing-lists">Listas de correo</a>
+      <span>Habla sobre Ruby con desarrolladores al rededor del mundo.</span>
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/ruby-lang.org/es/community/user-groups">Grupos de usuarios</a>
+      <span>Ponte en contacto con otros Rubyistas en tu localidad.</span>
+    </li>
+  
+  
+    
+      
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/ruby-lang.org/http://redmine.ruby-lang.org">Issue tracker</a>
+      <span>Reporta problemas de Ruby o ayudá a solucionarlos.</span>
+    </li>
+  
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/08/11/confoo-2012-call-for-papers-is-now-open/">ConFoo 2012: Call for Papers is Now Open!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/08/01/ruby-1-9-3-preview1-has-been-released/">Ruby 1.9.3 preview1 has been released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/07/15/ruby-1-9-2-p290-is-released/">Ruby 1.9.2-p290 is released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/07/02/ruby-1-8-7-p352-released/">Ruby 1.8.7-p352 released</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer>
+
+
+<nav role=navigation>
+
+
+<ul role=main-navigation>
+  
+  <li><a href="/ruby-lang.org/es/downloads/">Descargas</a></li>
+  
+  <li><a href="/ruby-lang.org/es/documentation/">Documentación</a></li>
+  
+  <li><a href="/ruby-lang.org/es/libraries/">Librerías</a></li>
+  
+  <li><a href="/ruby-lang.org/es/community/">Comunidad</a></li>
+  
+  <li><a href="/ruby-lang.org/es/about/">Acerca de Ruby</a></li>
+  
+</ul>
+
+</nav>
+<a href="/ruby-lang.org/es/credits">Créditos</a>
+
+</footer>
+</body>
+</html>

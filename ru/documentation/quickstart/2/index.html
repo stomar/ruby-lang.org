@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ruby Programming Language – Ruby за двадцать минут (2/4)</title>
+  <meta name="author" content="Ruby Community">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- meta -->
+  
+
+  <!-- scripts -->
+  <link rel="canonical" href="http://www.ruby-lang.org/ru/documentation/quickstart/2/index.html"/>
+  <link href="/ruby-lang.org/favicon.ico" rel="shortcut icon" />
+  <link href="/ruby-lang.org/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/ruby-lang.org/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/ruby-lang.org/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <link href="/ruby-lang.org/atom.xml" rel="alternate" title="Ruby Programming Language" type="application/atom+xml"/>
+  
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body  >
+  <header>
+
+
+<hgroup>
+  <div id="main-logo">
+    <a href="/ru"></a>
+    <span>Ruby</span>
+  </div>
+  <div id="download">
+    <a href="/ru/downloads">
+      <span class="download">Download 1.9.2</span>
+    </a>
+  </div>
+  <div id="excerpt">
+    <div class="hint">
+      <div>
+        <h2>Ruby</h2>
+        <p>
+          A happy programmer's language —
+          <span class="more"><a href="/ru/about">Read more…</a></span>
+        </p>
+      <div>
+    </div>
+  </div>
+  <!--<div id="langs">-->
+    <!---->
+    <!--<a href="/ru/documentation/quickstart/2/index.html">en</a>-->
+    <!---->
+    <!--<a href="/ru/documentation/quickstart/2/index.html">es</a>-->
+    <!---->
+    <!--<a href="/ru/documentation/quickstart/2/index.html">fr</a>-->
+    <!---->
+  <!--</div>-->
+  <a href="/ruby-lang.org/ru"></a>
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">Ruby за двадцать минут (2/4)</h1>
+  </header>
+  <p>Что если вы хотите сказать “Hello” множество раз, без насилования ваших пальцев? Нам нужно определить метод!</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">010</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">def</span> <span class="nf">h</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">011</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span>   <span class="nb">puts</span> <span class="s2">&quot;Hello World!&quot;</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">012</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">end</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Код <code>def h</code> начинается с определения метода. Он говорит Ruby то, что мы
+определяем метод, который называется <code>h</code>. Следующая строка является телом
+нашего метода, мы уже видили ее раньше: <code>puts "Hello World"</code>. И наконец, последняя строка <code>end</code> передает Ruby, то, что мы закончили
+определение метода.
+Ruby возвращает нам <code>=&gt; nil</code>, имея ввиду что он знает, что мы закончили определять метод.</p>
+
+<h2>Инструкция, Повторная жизнь Метода</h2>
+
+<p>Теперь давайте попробуем запустить этот метод несколько раз:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">013</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">h</span>
+</div><div class='line'><span class="no">Hello</span> <span class="no">World</span><span class="o">!</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">014</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">h</span><span class="p">()</span>
+</div><div class='line'><span class="no">Hello</span> <span class="no">World</span><span class="o">!</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Что-ж, это было очень легко, правда? Вызывать метод из Ruby это так же просто как и назначить ему имя в Ruby. Если метод не передает никаких
+параметров, это все что вам нужно. Вы конечно, можете добавить скобки, если вам очень прям таки этого хочется, но в
+них нет никакой необходимости.</p>
+
+<p>Но, что же если мы хотим сказать привет только одному человеку, а не всему миру? Просто переопределите <code>h</code> добавив <code>name</code> как параметр.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">015</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">def</span> <span class="nf">h</span> <span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">016</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span>   <span class="nb">puts</span> <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">!&quot;</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">017</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">end</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">01</span><span class="mi">8</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">h</span> <span class="p">(</span><span class="s2">&quot;Matz&quot;</span><span class="p">)</span>
+</div><div class='line'><span class="no">Hello</span> <span class="no">Matz</span><span class="o">!</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Великолепно, это работает&#8230; но давайте разберемся, что же здесь происходит.</p>
+
+<h2>Определение в строку</h2>
+
+<p>Что за <code>#{name}</code>? Ruby таким образом вставляет интерпретируемый код в строку. Переменная между двух фигурных скобок вставляется в нужном вам месте, далее Ruby преобразовывает значение переменной <code>name</code> в <code>String</code>.
+Как раз этим вы можете воспользоваться для того чтобы быть уверенным, что имя всегда отображается с заглавной буквы.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">01</span><span class="mi">9</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="nb">name</span> <span class="o">=</span> <span class="s2">&quot;World&quot;</span><span class="p">)</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">020</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span>    <span class="nb">puts</span> <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="nb">name</span><span class="o">.</span><span class="n">capitalize</span><span class="si">}</span><span class="s2">!&quot;</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">021</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">end</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">022</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">h</span> <span class="s2">&quot;chris&quot;</span>
+</div><div class='line'><span class="no">Hello</span> <span class="no">Chris</span><span class="o">!</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">023</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">h</span>
+</div><div class='line'><span class="no">Hello</span> <span class="no">World</span><span class="o">!</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Вы можете заметить здесь несколько примеров использования. Первое это то, что мы вызываем метод без скобок. Если код очевидный, их использование необязательно. Другой, то что мы присваиваем параметр <code>World</code> по умолчанию. Таким образом, если имя не будет определенно для метода, по умолчанию он воспользуется именем <code>"World"</code>.</p>
+
+<h2>Эволюция в Приветствие</h2>
+
+<p>Что если мы хотим сделать настоящее приветствие, которое запомнит ваше имя, и будет приветствовать всякий раз и относится с уважением? Вы должны использовать объекты для этого. Давайте попробуем создать наш первый “Greeter” класс.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">024</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">class</span> <span class="nc">Greeter</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">025</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span>   <span class="k">def</span> <span class="nf">initialize</span> <span class="p">(</span><span class="nb">name</span> <span class="o">=</span> <span class="s2">&quot;World&quot;</span><span class="p">)</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">026</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span>     <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">027</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span>   <span class="k">end</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">02</span><span class="mi">8</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span>   <span class="k">def</span> <span class="nf">say_hi</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">02</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span>     <span class="nb">puts</span> <span class="s2">&quot;Hi </span><span class="si">#{</span><span class="vi">@name</span><span class="si">}</span><span class="s2">!&quot;</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">030</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span>   <span class="k">end</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">031</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span>   <span class="k">def</span> <span class="nf">say_bye</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">032</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span>     <span class="nb">puts</span> <span class="s2">&quot;Bye </span><span class="si">#{</span><span class="vi">@name</span><span class="si">}</span><span class="s2">, come back soon.&quot;</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">033</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span>   <span class="k">end</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">034</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">end</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Новое слово для нас <code>class</code>. Данный код определяет новый класс с именем <code>Greeter</code> и содержит несколько методов для него. Так же обратите внимание на <code>@name</code>. Это экземпляр переменной, которая доступна для всех методов класса. Как вы успели заметить, <code>say_hi</code> и <code>say_bye</code> ее используют во всю.</p>
+
+<p>Так как же нам привести данный класс в движение? <a href="../3">Cоздание объекта</a>.</p>
+
+  
+</article>
+
+</div>
+
+<aside role=sidebar>
+  
+    
+
+
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/08/11/confoo-2012-call-for-papers-is-now-open/">ConFoo 2012: Call for Papers is Now Open!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/08/01/ruby-1-9-3-preview1-has-been-released/">Ruby 1.9.3 preview1 has been released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/07/15/ruby-1-9-2-p290-is-released/">Ruby 1.9.2-p290 is released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/07/02/ruby-1-8-7-p352-released/">Ruby 1.8.7-p352 released</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer>
+
+
+<nav role=navigation>
+
+
+<ul role=main-navigation>
+  
+</ul>
+
+</nav>
+<a href="/ruby-lang.org/ru/credits"></a>
+
+</footer>
+</body>
+</html>

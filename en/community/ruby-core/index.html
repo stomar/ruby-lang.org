@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ruby Programming Language – Ruby Core</title>
+  <meta name="author" content="Ruby Community">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- meta -->
+  
+
+  <!-- scripts -->
+  <link rel="canonical" href="http://www.ruby-lang.org/en/community/ruby-core/index.html"/>
+  <link href="/ruby-lang.org/favicon.ico" rel="shortcut icon" />
+  <link href="/ruby-lang.org/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/ruby-lang.org/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/ruby-lang.org/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <link href="/ruby-lang.org/atom.xml" rel="alternate" title="Ruby Programming Language" type="application/atom+xml"/>
+  
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body  >
+  <header>
+
+
+<hgroup>
+  <div id="main-logo">
+    <a href="/en"></a>
+    <span>Ruby</span>
+  </div>
+  <div id="download">
+    <a href="/en/downloads">
+      <span class="download">Download 1.9.2</span>
+    </a>
+  </div>
+  <div id="excerpt">
+    <div class="hint">
+      <div>
+        <h2>Ruby</h2>
+        <p>
+          A happy programmer's language —
+          <span class="more"><a href="/en/about">Read more…</a></span>
+        </p>
+      <div>
+    </div>
+  </div>
+  <!--<div id="langs">-->
+    <!---->
+    <!--<a href="/en/community/ruby-core/index.html">en</a>-->
+    <!---->
+    <!--<a href="/en/community/ruby-core/index.html">es</a>-->
+    <!---->
+    <!--<a href="/en/community/ruby-core/index.html">fr</a>-->
+    <!---->
+  <!--</div>-->
+  <a href="/ruby-lang.org/en"></a>
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">Ruby Core</h1>
+  </header>
+  <p>Now is a fantastic time to follow Ruby’s development, with Ruby 2.0
+development underway. With the increased attention Ruby has received in
+the past few years, there’s a growing need for good talent to help
+enhance Ruby and document its parts. So, where do you start?</p>
+
+<p>The topics related to Ruby development covered here are:</p>
+
+<ul>
+<li>Using Subversion to Track Ruby Development</li>
+<li>How to Use Git With the Main Ruby Repository</li>
+<li>Improving Ruby, Patch by Patch</li>
+<li>Rules for Core Developers</li>
+</ul>
+
+
+<h2>Using Subversion to Track Ruby Development</h2>
+
+<p>Checking out the latest Ruby source code is a matter of logging into the
+<a href="http://www.linuxdevcenter.com/pub/a/linux/2001/11/29/ruby.html">Subversion</a> anonymous account. From your commandline:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='bash'><div class='line'><span class="nv">$ </span>svn co http://svn.ruby-lang.org/repos/ruby/trunk ruby
+</div></code></pre></td></tr></table></div>
+
+<p>The <code>ruby</code> directory will now contain the latest source code for Ruby
+1.9 (trunk), which is the development version of Ruby. The trunk was
+used to release a stable 1.9.1 version in January 2009. Currently
+patches applied to the trunk are backported to the stable 1_9_1 branch
+(see below).</p>
+
+<p>If you’d like to follow patching of Ruby 1.9.1, you should use the
+<code>ruby_1_9_1</code> branch when checking out:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='bash'><div class='line'><span class="nv">$ </span>svn co http://svn.ruby-lang.org/repos/ruby/branches/ruby_1_9_1
+</div></code></pre></td></tr></table></div>
+
+<p>If you’d like to follow patching of Ruby 1.8, you should use the
+<code>ruby_1_8_6</code> or <code>ruby_1_8_7</code> branch when checking out (depending on the
+version you’re using):</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='bash'><div class='line'><span class="nv">$ </span>svn co http://svn.ruby-lang.org/repos/ruby/branches/ruby_1_8_7
+</div></code></pre></td></tr></table></div>
+
+<p>This will check out the Ruby 1.8.7 development tree into a <code>ruby_1_8_7</code>
+directory. Developers working on Ruby 1.8 are expected to migrate their
+changes to Ruby’s trunk, so often the two branches are very similiar,
+with the exception of improvements made by Matz and Nobu to the language
+itself.</p>
+
+<p>If you prefer, you may browse <a href="http://www.artima.com/intv/closures2.html">Ruby’s repository via the web</a>.</p>
+
+<p>For information about Subversion, please see <a href="http://subversion.tigris.org/faq.html">the Subversion FAQ</a> and
+<a href="http://svnbook.org">the Subversion book</a>. Alternatively, you may find <a href="http://www.pragmaticprogrammer.com/titles/svn/">Pragmatic Version
+Control with Subversion</a> to be a useful introductory book.</p>
+
+<h2>How to Use Git With the Main Ruby Repository</h2>
+
+<p>Those who prefer to use <a href="http://git-scm.com/">Git</a> over Subversion can find instructions
+with <a href="http://github.com/ruby/ruby">the mirror on GitHub</a>, both for <a href="http://wiki.github.com/shyouhei/ruby/committerhowto">those with commit access</a>
+and <a href="http://wiki.github.com/shyouhei/ruby/noncommitterhowto">everybody else</a>.</p>
+
+<h2>Improving Ruby, Patch by Patch</h2>
+
+<p>The core team maintains <a href="http://redmine.ruby-lang.org/">a bug tracker</a> for submitting patches and
+bug reports to Matz and the gang. These reports also get submitted to
+the <a href="/ruby-lang.org/en/community/mailing-lists/#ruby-core">Ruby-Core mailing list</a> for
+discussion, so you can be sure your request won’t go unnoticed. You can
+also send your patches straight to the mailing list. Either way, you are
+encouraged to take part in the discussion that ensues.</p>
+
+<p>Please look over the <a href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/25139">Patch Writer’s Guide</a> for some tips, straight
+from matz, on how to get your patches considered.</p>
+
+<p>To summarize, the steps for building a patch are:</p>
+
+<ol>
+<li>If you are fixing a bug in Ruby 1.8, check out a copy of Ruby 1.8
+from Subversion using the <code>ruby_1_8</code> branch.<code>
+ $ svn co http://svn.ruby-lang.org/repos/ruby/branches/ruby_1_8
+</code>If you wish to add a feature to Ruby, check out the trunk of Ruby’s
+source. Even if you wish to add a feature to Ruby 1.8, it has to be
+proven in the trunk first.<code>
+ $ svn co http://svn.ruby-lang.org/repos/ruby/trunk ruby
+</code></li>
+<li>Add your improvements to the code.</li>
+<li>Create a patch.<code>
+ $ svn diff &gt; ruby-changes.patch
+</code></li>
+<li>Email your patch to the <a href="/ruby-lang.org/en/community/mailing-lists/#ruby-core">Ruby-Core mailing
+list</a> with a CHANGELOG entry
+describing the patch.</li>
+<li>If there are no issues raised about the patch, committers will be
+given the approval to apply it.</li>
+</ol>
+
+
+<p><strong>Please note:</strong> patches should be submitted as a <a href="http://www.gnu.org/software/diffutils/manual/html_node/Unified-Format.html">unified diff</a>.
+For more on how patches are merged, see <a href="http://www.gnu.org/software/diffutils/manual/html_node/Merging-with-patch.html#Merging%20with%20patch">the diffutils reference</a>.</p>
+
+<p>Discussion of Ruby’s development converges on the <a href="/ruby-lang.org/en/community/mailing-lists/#ruby-core">Ruby-Core mailing
+list</a>. So, if you are curious
+about whether your patch is worthwhile or you want to spark a discussion
+about Ruby’s future, don’t hesitate to come aboard. Be warned that
+off-topic discussions are not tolerated on this list, the noise level
+should be very low, topics should be pointed, well-conceived and
+well-written. Since we’re addressing Ruby’s creator, let’s have some
+reverence.</p>
+
+<p>Keep in mind that Ruby’s core developers live in Japan and, while many
+speak very good English, there is a significant timezone difference.
+They also have an entire body of Japanese development lists happening
+alongside the English counterparts. Be patient, if your claim isn’t
+resolved, be persistent—give it another shot a few days later.</p>
+
+<h2>Rules for Core Developers</h2>
+
+<p>Generally, the developers of Ruby should be familiar with the source
+code and the style of development used by the team. To be clear, the
+following guidelines should be honored when checking into Subversion:</p>
+
+<ul>
+<li>All check-ins should be described in the <code>ChangeLog</code>, following the
+<a href="http://www.gnu.org/prep/standards/standards.html#Change-Logs">GNU conventions</a>. (Many Ruby core developers use Emacs <code>add-log</code>
+mode, which can be accessed with the command <code>C-x 4 a</code>.)</li>
+<li>Check-in dates should be given in Japan Standard Time (UTC+9).</li>
+<li>The bulleted points from your ChangeLog should also be placed in the
+Subversion commit message. This message will be automatically mailed
+to the Ruby-CVS list after you commit.</li>
+<li>K&amp;R function declarations are used throughout Ruby’s source code
+and its packaged extensions.</li>
+<li>Please, do not use C++-style comments (<code>//</code>), Ruby’s maintainers
+instead prefer the standard C multiline comment. (<code>/* .. */</code>)</li>
+</ul>
+
+
+  
+    <footer>
+      
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.ruby-lang.org/en/community/ruby-core/index.html" data-via="" data-counturl="http://www.ruby-lang.org/en/community/ruby-core/index.html" >Tweet</a>
+  
+  
+  <g:plusone size="medium"></g:plusone>
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+</div>
+
+<aside role=sidebar>
+  
+    
+
+
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Get started</span>
+    the easy way
+  </div>
+  <ul class="nav">
+  
+  
+    
+      
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/ruby-lang.org/http://tryruby.org">Try Ruby! (in your browser)</a>
+      
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/ruby-lang.org/en/downloads">Download Ruby</a>
+      
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/ruby-lang.org/en/documentation/quickstart">Ruby in 20mn</a>
+      
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/ruby-lang.org/en/documentation/ruby-from-other-languages">Ruby from other languages</a>
+      
+    </li>
+  
+  </ul>
+</section>
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Explore</span>
+    a new world…
+  </div>
+  <ul class="nav">
+  
+  
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/ruby-lang.org/en/documentation">Documentation</a>
+      
+    </li>
+  
+  
+    
+      
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/ruby-lang.org/http://www.amazon.com/s/ref=sr_nr_n_5?ie=UTF8&rs=1000&keywords=Ruby&rh=i%3Aaps%2Ck%3ARuby%2Ci%3Astripbooks%2Cn%3A1000%2Cn%3A5">Books</a>
+      
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/ruby-lang.org/en/libraries">Libraries</a>
+      
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/ruby-lang.org/en/documentation/success-stories">Success Stories</a>
+      
+    </li>
+  
+  </ul>
+</section>
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Participate</span>
+    in a friendly and growing community
+  </div>
+  <ul class="nav">
+  
+  
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/ruby-lang.org/en/community/mailing-lists">Mailing lists</a>
+      <span>Talk about Ruby with programmers from all around the world.</span>
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/ruby-lang.org/en/community/user-groups">User groups</a>
+      <span>Get in contact with Rubyists in your area.</span>
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/ruby-lang.org/en/community/weblogs">Blogs</a>
+      <span>Read about what’s happening right now in the Ruby community.</span>
+    </li>
+  
+  
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/ruby-lang.org/en/community/ruby-core">Ruby Core</a>
+      <span>Help polish the rough edges of the latest Ruby.</span>
+    </li>
+  
+  
+    
+      
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/ruby-lang.org/http://redmine.ruby-lang.org">Issue tracker</a>
+      <span>Report or help solve issues in Ruby.</span>
+    </li>
+  
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/08/11/confoo-2012-call-for-papers-is-now-open/">ConFoo 2012: Call for Papers is Now Open!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/08/01/ruby-1-9-3-preview1-has-been-released/">Ruby 1.9.3 preview1 has been released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/07/15/ruby-1-9-2-p290-is-released/">Ruby 1.9.2-p290 is released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/07/02/ruby-1-8-7-p352-released/">Ruby 1.8.7-p352 released</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer>
+
+
+<nav role=navigation>
+
+
+<ul role=main-navigation>
+  
+  <li><a href="/ruby-lang.org/en/downloads/">Downloads</a></li>
+  
+  <li><a href="/ruby-lang.org/en/documentation/">Documentation</a></li>
+  
+  <li><a href="/ruby-lang.org/en/libraries/">Libraries</a></li>
+  
+  <li><a href="/ruby-lang.org/en/community/">Community</a></li>
+  
+  <li><a href="/ruby-lang.org/en/news/">News</a></li>
+  
+  <li><a href="/ruby-lang.org/en/security/">Security</a></li>
+  
+  <li><a href="/ruby-lang.org/en/about/">About Ruby</a></li>
+  
+</ul>
+
+</nav>
+<a href="/ruby-lang.org/en/credits">Credits</a>
+
+</footer>
+</body>
+</html>

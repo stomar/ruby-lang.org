@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ruby Programming Language – Ruby за двадцать минут (1/4)</title>
+  <meta name="author" content="Ruby Community">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- meta -->
+  
+
+  <!-- scripts -->
+  <link rel="canonical" href="http://www.ruby-lang.org/ru/documentation/quickstart/1/index.html"/>
+  <link href="/ruby-lang.org/favicon.ico" rel="shortcut icon" />
+  <link href="/ruby-lang.org/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/ruby-lang.org/javascripts/modernizr-2.0.js"></script>
+  <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
+  <script src="/ruby-lang.org/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <link href="/ruby-lang.org/atom.xml" rel="alternate" title="Ruby Programming Language" type="application/atom+xml"/>
+  
+
+  
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body  >
+  <header>
+
+
+<hgroup>
+  <div id="main-logo">
+    <a href="/ru"></a>
+    <span>Ruby</span>
+  </div>
+  <div id="download">
+    <a href="/ru/downloads">
+      <span class="download">Download 1.9.2</span>
+    </a>
+  </div>
+  <div id="excerpt">
+    <div class="hint">
+      <div>
+        <h2>Ruby</h2>
+        <p>
+          A happy programmer's language —
+          <span class="more"><a href="/ru/about">Read more…</a></span>
+        </p>
+      <div>
+    </div>
+  </div>
+  <!--<div id="langs">-->
+    <!---->
+    <!--<a href="/ru/documentation/quickstart/1/index.html">en</a>-->
+    <!---->
+    <!--<a href="/ru/documentation/quickstart/1/index.html">es</a>-->
+    <!---->
+    <!--<a href="/ru/documentation/quickstart/1/index.html">fr</a>-->
+    <!---->
+  <!--</div>-->
+  <a href="/ruby-lang.org/ru"></a>
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">Ruby за двадцать минут (1/4)</h1>
+  </header>
+  <h2>Вступление</h2>
+
+<p>Это маленький Ruby урок который должен занять не больше 20 минут времени. Он предполагает наличие установленного интерпретатора Ruby в системе. Если у вас еще нет Ruby на вашем компьютере <a href="en/downloads/">загрузите</a> и установите это перед тем как начать.</p>
+
+<h2>Интерактивный Ruby</h2>
+
+<p>Ruby идет в комплекте с программой которая отображает результаты интерпретируемого кода в реальном времени. Использование интерактивной консоли как эта, это потрясающий путь к изучению языка.</p>
+
+<p>Запустите IRB</p>
+
+<ul>
+<li>Если вы пользователь <strong>Mac OS X</strong> откройте <code>Terminal</code> и наберите <code>irb</code> затем нажмите enter.</li>
+<li>Если вы пользователь <strong>Linux</strong>, откройте консоль и наберите <code>irb</code> и нажмите enter.</li>
+<li>Если вы пользователь <strong>Windows</strong>, откройте <code>fxri</code> из секции Ruby в меню Пуск.</li>
+</ul>
+
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">001</span><span class="p">:</span><span class="mi">0</span><span class="p">\</span><span class="o">&gt;</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Отлично, irb запущен. Что дальше?
+Наберите: <code>Hello World</code> и нажмите [Enter]:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">001</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="s2">&quot;Hello World&quot;</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="s2">&quot;Hello World&quot;</span>
+</div></code></pre></td></tr></table></div>
+
+<h2>Ruby выполнил это для вас!</h2>
+
+<p>Что произошло? Мы написали только что классическую “Hello World” программу? Не совсем. Линейный вывод IRB просто отображает нам результат выражения который она обрабатывала. Для того чтобы написать “Hello World” нам нужно совсем немного:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">002</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="s2">&quot;Hello World&quot;</span>
+</div><div class='line'><span class="no">Hello</span> <span class="no">World</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div></code></pre></td></tr></table></div>
+
+<p><code>puts</code> это базовая команда для вывода чего-либо из Ruby, например как значения объекта или в данном случае объекта класса String. Но тогда, что же
+значит <code>=&gt; nil</code>? Как говорилось ранее это последний результат который возвратил нам Ruby. <code>puts</code> всегда возвращает <code>nil</code>, которое в Ruby является булевым значением <code>false</code>.</p>
+
+<h2>Ваш бесплатный калькулятор</h2>
+
+<p>Наконец таки, нам достаточно навыков для использования IRB в качестве калькулятора:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">003</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="mi">3</span><span class="o">+</span><span class="mi">2</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="mi">5</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Три плюс два. Достаточно просто правда? Но что же, по поводу три умножить на два? Попробуйте! Это достаточно легко, вы так же можете вернуться к предыдущему выполненному коду, нажав <strong>стрелка-вверх</strong> на клавиатуре, и вернуться строке <code>3+2</code>. Если у вас получилось, вы можете воспользоваться стрелкой влево чтобы переместиться к <code>+</code> символу, и заменить его на символ <code>*</code>.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">004</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="mi">3</span><span class="o">*</span><span class="mi">2</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="mi">6</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Следующим, давайте попробуем вычислить значение три в квадрате:</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">005</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="mi">3</span><span class="o">**</span><span class="mi">2</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="mi">9</span>
+</div></code></pre></td></tr></table></div>
+
+<p>В Ruby <code>**</code> путь сказать “возведение в степень”. Но что если вы хотите пойти другим путем, и найти квадратный корень?</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">006</span><span class="p">:</span><span class="mi">0</span><span class="p">\</span><span class="o">&gt;</span> <span class="no">Math</span><span class="o">.</span><span class="n">sqrt</span> <span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Ладно, подождите, что это было? Если вы уже догадались, “это было извлечение квадратного корня девяти”, вы правы.
+Но давайте рассмотрим некоторые вещи, более детально. Для начала, что же такое <code>Math</code>?</p>
+
+<h2>Модули, тематический код</h2>
+
+<p><code>Math</code> это встроенный модуль для математических вычислений. Группирует математические методы вычислений под знакомым именем. Например <code>Math</code> содержит в себе методы такие как <code>sin()</code> и <code>tan()</code>, что является методом для “вычисления синуса угла” и “вычисления тангенса угла”.</p>
+
+<p>Следующее это точка. Что она обозначает? Точка это то как индетифицировать передачу сообщения. Какого? В данном случае это <code>sqrt(9)</code>, который означает вызов метода <code>sqrt</code>, коротко обозначающий “square root” что в переводе является “квадратный корень”, для числового параметра <code>9</code>.</p>
+
+<p>Результат этого метода значение <code>3.0</code>. Вы должны иметь ввиду, что это не просто <code>3</code>. Это потому что чаще всего значение квадратного корня – это не однозначное числовое значение <code>integer</code>, по этому, метод всегда возвращает значение с плавающей точкой <code>float</code>.</p>
+
+<p>Что если мы хотим запомнить результат вычислений? Давайте присвоим ей результат в переменную.</p>
+
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">007</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">**</span> <span class="mi">2</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="mi">9</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">:</span><span class="mo">00</span><span class="mi">8</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">**</span> <span class="mi">2</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="mi">16</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">00</span><span class="mi">9</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="no">Math</span><span class="o">.</span><span class="n">sqrt</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="mi">5</span><span class="o">.</span><span class="mi">0</span>
+</div></code></pre></td></tr></table></div>
+
+<p>Видите, как превосходно вместе с калькулятором, мы отошли подальше от
+традиционного <code>Hello World</code> сообщения с которого мы начали, но давайте более детально
+сфокусируемся на нем&#8230;
+<a href="./2">Давайте вернемся к ним</a>.</p>
+
+  
+</article>
+
+</div>
+
+<aside role=sidebar>
+  
+    
+
+
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/08/11/confoo-2012-call-for-papers-is-now-open/">ConFoo 2012: Call for Papers is Now Open!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/08/01/ruby-1-9-3-preview1-has-been-released/">Ruby 1.9.3 preview1 has been released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/07/15/ruby-1-9-2-p290-is-released/">Ruby 1.9.2-p290 is released</a>
+      </li>
+    
+      <li class="post">
+        <a href="/ruby-lang.org/blog/2011/07/02/ruby-1-8-7-p352-released/">Ruby 1.8.7-p352 released</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer>
+
+
+<nav role=navigation>
+
+
+<ul role=main-navigation>
+  
+</ul>
+
+</nav>
+<a href="/ruby-lang.org/ru/credits"></a>
+
+</footer>
+</body>
+</html>
