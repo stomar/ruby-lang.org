@@ -6,7 +6,7 @@
 
 ## Synopsis
 
-This repository contains the new http://www.ruby-lang.org. **The preview is at http://ruby.github.com/ruby-lang.org**. Please not neither the content or the design are definitive at this early stage of the project!
+This repository contains the new http://www.ruby-lang.org. **The preview is at http://ruby.github.com/ruby-lang.org**. Please note neither the content or the design are definitive at this early stage of the project!
 
 This is the official port approved by Matz and maintained by the current contributors to ruby-lang.org (that is, the Visual Identity Team (VIT) as some used to call us).
 
