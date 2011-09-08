@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'RedCloth'
   s.add_dependency 'haml'
   s.add_dependency 'compass'
+  s.add_dependency 'fancy-buttons'
   s.add_dependency 'rubypants'
   s.add_dependency 'pygments.rb'
   s.add_development_dependency 'yard'

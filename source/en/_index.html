@@ -9,19 +9,6 @@
       {% include article.html %}
     </article>
   {% endfor %}
-  <nav role="pagination">
-    <div>
-      {% if paginator.next_page %}
-        <a class="prev" href="{{ site.root }}page{{paginator.next_page}}/">&larr; Older</a>
-      {% endif %}
-      <a href="{{ site.root }}blog/archives">Blog Archives</a>
-      {% if paginator.previous_page and paginator.previous_page > 1 %}
-        <a class="next" href="{{ site.root }}page{{paginator.previous_page}}/">Newer &rarr;</a>
-      {% elsif paginator.previous_page %}
-        <a class="next" href="{{ site.root }}">Newer &rarr;</a>
-      {% endif %}
-    </div>
-  </nav>
   {% if site.disqus_short_name %}
   <script type="text/javascript">
       var disqus_shortname = '{{ site.disqus_short_name }}';
