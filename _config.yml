@@ -194,7 +194,7 @@ email:
 #    Jekyll & Plugins     #
 # ----------------------- #
 
-root: /
+root: /ruby-lang.org/
 port: 4000
 permalink: /blog/:year/:month/:day/:title/
 source: source
