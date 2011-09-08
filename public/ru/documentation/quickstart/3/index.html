@@ -322,18 +322,18 @@
 </div><div class='line'><span class="k">class</span> <span class="nc">MegaGreeter</span>
 </div><div class='line'>  <span class="kp">attr_accessor</span> <span class="ss">:names</span>
 </div><div class='line'>
-</div><div class='line'>  <span class="c1"># Создаем объект</span>
+</div><div class='line'>  <span class="c1"># Ð¡Ð¾Ð·Ð´Ð°ÐµÐ¼ Ð¾Ð±ÑÐµÐºÑ</span>
 </div><div class='line'>  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">names</span> <span class="o">=</span> <span class="s2">&quot;World&quot;</span><span class="p">)</span>
 </div><div class='line'>    <span class="vi">@names</span> <span class="o">=</span> <span class="n">names</span>
 </div><div class='line'>  <span class="k">end</span>
 </div><div class='line'>
-</div><div class='line'>  <span class="c1"># Говорим всем привет</span>
+</div><div class='line'>  <span class="c1"># ÐÐ¾Ð²Ð¾ÑÐ¸Ð¼ Ð²ÑÐµÐ¼ Ð¿ÑÐ¸Ð²ÐµÑ</span>
 </div><div class='line'>  <span class="k">def</span> <span class="nf">say_hi</span>
 </div><div class='line'>    <span class="k">if</span> <span class="vi">@names</span><span class="o">.</span><span class="n">nil?</span>
 </div><div class='line'>      <span class="nb">puts</span> <span class="s2">&quot;...&quot;</span>
 </div><div class='line'>    <span class="k">elsif</span> <span class="vi">@names</span><span class="o">.</span><span class="n">respond_to?</span><span class="p">(</span><span class="s2">&quot;each&quot;</span><span class="p">)</span>
 </div><div class='line'>
-</div><div class='line'>      <span class="c1"># @names это список какой-то, итерации!</span>
+</div><div class='line'>      <span class="c1"># @names ÑÑÐ¾ ÑÐ¿Ð¸ÑÐ¾Ðº ÐºÐ°ÐºÐ¾Ð¹-ÑÐ¾, Ð¸ÑÐµÑÐ°ÑÐ¸Ð¸!</span>
 </div><div class='line'>      <span class="vi">@names</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
 </div><div class='line'>        <span class="nb">puts</span> <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">!&quot;</span>
 </div><div class='line'>      <span class="k">end</span>
@@ -342,12 +342,12 @@
 </div><div class='line'>    <span class="k">end</span>
 </div><div class='line'>  <span class="k">end</span>
 </div><div class='line'>
-</div><div class='line'>  <span class="c1"># Говорим всем пока</span>
+</div><div class='line'>  <span class="c1"># ÐÐ¾Ð²Ð¾ÑÐ¸Ð¼ Ð²ÑÐµÐ¼ Ð¿Ð¾ÐºÐ°</span>
 </div><div class='line'>  <span class="k">def</span> <span class="nf">say_bye</span>
 </div><div class='line'>    <span class="k">if</span> <span class="vi">@names</span><span class="o">.</span><span class="n">nil?</span>
 </div><div class='line'>      <span class="nb">puts</span> <span class="s2">&quot;...&quot;</span>
 </div><div class='line'>    <span class="k">elsif</span> <span class="vi">@names</span><span class="o">.</span><span class="n">respond_to?</span><span class="p">(</span><span class="s2">&quot;join&quot;</span><span class="p">)</span>
-</div><div class='line'>      <span class="c1"># Соединяем элементы списка через запятую</span>
+</div><div class='line'>      <span class="c1"># Ð¡Ð¾ÐµÐ´Ð¸Ð½ÑÐµÐ¼ ÑÐ»ÐµÐ¼ÐµÐ½ÑÑ ÑÐ¿Ð¸ÑÐºÐ° ÑÐµÑÐµÐ· Ð·Ð°Ð¿ÑÑÑÑ</span>
 </div><div class='line'>      <span class="nb">puts</span> <span class="s2">&quot;Goodbye </span><span class="si">#{</span><span class="vi">@names</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">.  Come back soon!&quot;</span>
 </div><div class='line'>    <span class="k">else</span>
 </div><div class='line'>      <span class="nb">puts</span> <span class="s2">&quot;Goodbye </span><span class="si">#{</span><span class="vi">@names</span><span class="si">}</span><span class="s2">.  Come back soon!&quot;</span>
@@ -362,18 +362,18 @@
 </div><div class='line'>  <span class="n">mg</span><span class="o">.</span><span class="n">say_hi</span>
 </div><div class='line'>  <span class="n">mg</span><span class="o">.</span><span class="n">say_bye</span>
 </div><div class='line'>
-</div><div class='line'>  <span class="c1"># Меняем имя на &quot;Zeke&quot;</span>
+</div><div class='line'>  <span class="c1"># ÐÐµÐ½ÑÐµÐ¼ Ð¸Ð¼Ñ Ð½Ð° &quot;Zeke&quot;</span>
 </div><div class='line'>  <span class="n">mg</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="s2">&quot;Zeke&quot;</span>
 </div><div class='line'>  <span class="n">mg</span><span class="o">.</span><span class="n">say_hi</span>
 </div><div class='line'>  <span class="n">mg</span><span class="o">.</span><span class="n">say_bye</span>
 </div><div class='line'>
-</div><div class='line'>  <span class="c1"># Меняем имя в массив имен</span>
+</div><div class='line'>  <span class="c1"># ÐÐµÐ½ÑÐµÐ¼ Ð¸Ð¼Ñ Ð² Ð¼Ð°ÑÑÐ¸Ð² Ð¸Ð¼ÐµÐ½</span>
 </div><div class='line'>  <span class="n">mg</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;Albert&quot;</span><span class="p">,</span> <span class="s2">&quot;Brenda&quot;</span><span class="p">,</span> <span class="s2">&quot;Charles&quot;</span><span class="p">,</span>
 </div><div class='line'>    <span class="s2">&quot;Dave&quot;</span><span class="p">,</span> <span class="s2">&quot;Englebert&quot;</span><span class="o">]</span>
 </div><div class='line'>  <span class="n">mg</span><span class="o">.</span><span class="n">say_hi</span>
 </div><div class='line'>  <span class="n">mg</span><span class="o">.</span><span class="n">say_bye</span>
 </div><div class='line'>
-</div><div class='line'>  <span class="c1"># Присваиваем переменной nil</span>
+</div><div class='line'>  <span class="c1"># ÐÑÐ¸ÑÐ²Ð°Ð¸Ð²Ð°ÐµÐ¼ Ð¿ÐµÑÐµÐ¼ÐµÐ½Ð½Ð¾Ð¹ nil</span>
 </div><div class='line'>  <span class="n">mg</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="kp">nil</span>
 </div><div class='line'>  <span class="n">mg</span><span class="o">.</span><span class="n">say_hi</span>
 </div><div class='line'>  <span class="n">mg</span><span class="o">.</span><span class="n">say_bye</span>

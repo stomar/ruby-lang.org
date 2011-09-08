@@ -142,8 +142,8 @@ in aList: &#8230;</tt>), with Ruby you’ll very often instead see</p>
 <span class='line'>3</span>
 <span class='line'>4</span>
 </pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">some_list</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">this_item</span><span class="o">|</span>
-</div><div class='line'><span class="err">  </span><span class="c1"># We&#39;re inside the block.</span>
-</div><div class='line'><span class="err">  </span><span class="c1"># deal with this_item.</span>
+</div><div class='line'><span class="err">Â Â </span><span class="c1"># We&#39;re inside the block.</span>
+</div><div class='line'><span class="err">Â Â </span><span class="c1"># deal with this_item.</span>
 </div><div class='line'><span class="k">end</span>
 </div></code></pre></td></tr></table></div>
 
@@ -282,9 +282,9 @@ code (the example applies to other languages, too):</p>
 <span class='line'>5</span>
 </pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="c1"># in Python</span>
 </div><div class='line'><span class="k">if</span> <span class="mi">0</span><span class="p">:</span>
-</div><div class='line'><span class="err">  </span><span class="nb">print</span> <span class="s2">&quot;0 is true&quot;</span>
+</div><div class='line'><span class="err">Â Â </span><span class="nb">print</span> <span class="s2">&quot;0 is true&quot;</span>
 </div><div class='line'><span class="k">else</span><span class="p">:</span>
-</div><div class='line'><span class="err">  </span><span class="nb">print</span> <span class="s2">&quot;0 is false&quot;</span>
+</div><div class='line'><span class="err">Â Â </span><span class="nb">print</span> <span class="s2">&quot;0 is false&quot;</span>
 </div></code></pre></td></tr></table></div>
 
 <p>This will print “0 is false”. The equivalent Ruby:</p>
@@ -297,9 +297,9 @@ code (the example applies to other languages, too):</p>
 <span class='line'>6</span>
 </pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="c1"># in Ruby</span>
 </div><div class='line'><span class="k">if</span> <span class="mi">0</span>
-</div><div class='line'><span class="err">  </span><span class="nb">puts</span> <span class="s2">&quot;0 is true&quot;</span>
+</div><div class='line'><span class="err">Â Â </span><span class="nb">puts</span> <span class="s2">&quot;0 is true&quot;</span>
 </div><div class='line'><span class="k">else</span>
-</div><div class='line'><span class="err">  </span><span class="nb">puts</span> <span class="s2">&quot;0 is false&quot;</span>
+</div><div class='line'><span class="err">Â Â </span><span class="nb">puts</span> <span class="s2">&quot;0 is false&quot;</span>
 </div><div class='line'><span class="k">end</span>
 </div></code></pre></td></tr></table></div>
 
@@ -315,9 +315,9 @@ code (the example applies to other languages, too):</p>
 <span class='line'>4</span>
 <span class='line'>5</span>
 </pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="k">class</span> <span class="nc">MyClass</span>
-</div><div class='line'><span class="err">  </span><span class="kp">private</span>
-</div><div class='line'><span class="err">  </span><span class="k">def</span> <span class="nf">a_method</span><span class="p">;</span> <span class="kp">true</span><span class="p">;</span> <span class="k">end</span>
-</div><div class='line'><span class="err">  </span><span class="k">def</span> <span class="nf">another_method</span><span class="p">;</span> <span class="kp">false</span><span class="p">;</span> <span class="k">end</span>
+</div><div class='line'><span class="err">Â Â </span><span class="kp">private</span>
+</div><div class='line'><span class="err">Â Â </span><span class="k">def</span> <span class="nf">a_method</span><span class="p">;</span> <span class="kp">true</span><span class="p">;</span> <span class="k">end</span>
+</div><div class='line'><span class="err">Â Â </span><span class="k">def</span> <span class="nf">another_method</span><span class="p">;</span> <span class="kp">false</span><span class="p">;</span> <span class="k">end</span>
 </div><div class='line'><span class="k">end</span>
 </div></code></pre></td></tr></table></div>
 
@@ -336,13 +336,13 @@ public:</p>
 <span class='line'>8</span>
 <span class='line'>9</span>
 </pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="k">class</span> <span class="nc">MyClass</span>
-</div><div class='line'><span class="err">  </span><span class="c1"># Now a_method is public</span>
-</div><div class='line'><span class="err">  </span><span class="k">def</span> <span class="nf">a_method</span><span class="p">;</span> <span class="kp">true</span><span class="p">;</span> <span class="k">end</span>
+</div><div class='line'><span class="err">Â Â </span><span class="c1"># Now a_method is public</span>
+</div><div class='line'><span class="err">Â Â </span><span class="k">def</span> <span class="nf">a_method</span><span class="p">;</span> <span class="kp">true</span><span class="p">;</span> <span class="k">end</span>
 </div><div class='line'>
-</div><div class='line'><span class="err">  </span><span class="kp">private</span>
+</div><div class='line'><span class="err">Â Â </span><span class="kp">private</span>
 </div><div class='line'>
-</div><div class='line'><span class="err">  </span><span class="c1"># another_method is private</span>
-</div><div class='line'><span class="err">  </span><span class="k">def</span> <span class="nf">another_method</span><span class="p">;</span> <span class="kp">false</span><span class="p">;</span> <span class="k">end</span>
+</div><div class='line'><span class="err">Â Â </span><span class="c1"># another_method is private</span>
+</div><div class='line'><span class="err">Â Â </span><span class="k">def</span> <span class="nf">another_method</span><span class="p">;</span> <span class="kp">false</span><span class="p">;</span> <span class="k">end</span>
 </div><div class='line'><span class="k">end</span>
 </div></code></pre></td></tr></table></div>
 
@@ -435,9 +435,9 @@ instance as its receiver. Example, adapted from the <a href="http://www.linuxdev
 </div><div class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">024</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">end</span>
 </div><div class='line'><span class="o">=&gt;</span> <span class="no">Test</span>
 </div><div class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">025</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">t1</span> <span class="o">==</span> <span class="n">t2</span>
-</div><div class='line'><span class="no">NoMethodError</span><span class="p">:</span> <span class="kp">private</span> <span class="nb">method</span> <span class="sb">`func&#39; called for #&lt;0x342784&gt;        from (irb):8:in `</span><span class="o">==</span><span class="err">&#39;</span>
-</div><div class='line'><span class="err">        </span><span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">25</span>
-</div><div class='line'><span class="err">        </span><span class="n">from</span> <span class="p">:</span><span class="mi">0</span>
+</div><div class='line'><span class="no">NoMethodError</span><span class="p">:</span> <span class="kp">private</span> <span class="nb">method</span> <span class="sb">`func&#39; called for #&lt;0x342784&gt;Â Â Â Â Â Â Â Â from (irb):8:in `</span><span class="o">==</span><span class="err">&#39;</span>
+</div><div class='line'><span class="err">Â Â Â Â Â Â Â Â </span><span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">25</span>
+</div><div class='line'><span class="err">Â Â Â Â Â Â Â Â </span><span class="n">from</span> <span class="p">:</span><span class="mi">0</span>
 </div><div class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">026</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;&lt;</span><span class="sr">/0x342784&gt;&lt;/</span><span class="mh">0x342784</span><span class="o">&gt;&lt;</span><span class="sr">/0x34ab50&gt;</span>
 </div></code></pre></td></tr></table></div>
 
