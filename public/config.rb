@@ -1,3 +1,5 @@
+require 'fancy-buttons'
+
 # Compass configuration
 #
 http_path       = "/"
