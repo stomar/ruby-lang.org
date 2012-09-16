@@ -131,7 +131,7 @@ following guidelines should be honored when checking into Subversion:
 * Please, do not use C++-style comments (`//`), Ruby’s maintainers
   instead prefer the standard C multiline comment. (`/* .. */`)
 
-[1]: http://subversion.tigris.org/
+[1]: http://subversion.apache.org/
 [2]: http://svn.ruby-lang.org/cgi-bin/viewvc.cgi/
 [3]: http://subversion.tigris.org/faq.html
 [4]: http://svnbook.org
