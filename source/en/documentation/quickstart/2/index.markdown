@@ -90,6 +90,11 @@ an object for that. Let’s create a “Greeter” class.
 
 The  new keyword here is `class`. This defines a new class called `Greeter` and a bunch of methods for that class. Also notice ``name`. This is an instance variable, and is available to all the methods of the class. As you can see it’s used by `say_hi` and `say_bye`.
 
-So how do we get this Greeter class set in motion? [create an object][].
+So how do we get this Greeter class set in motion? [create an object][ruby20min3].
 
-  [create an object]: ../3
+
+## [1][ruby20min1] | 2 | [3][ruby20min3] | [4][ruby20min4]
+
+[ruby20min1]: ../
+[ruby20min3]: ../3
+[ruby20min4]: ../4

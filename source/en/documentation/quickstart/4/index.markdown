@@ -142,3 +142,9 @@ which rounds up links to manuals and tutorials, all freely available online.
 Or, if you'd really like to dig into a book, check the
 [book list](http://www.ruby-doc.org/bookstore) (off-site link)
 for titles available for sale online or at your local bookseller.
+
+## [1][ruby20min1] | [2][ruby20min2] | [3][ruby20min3] | 4
+
+[ruby20min1]: ../
+[ruby20min2]: ../2
+[ruby20min3]: ../3
