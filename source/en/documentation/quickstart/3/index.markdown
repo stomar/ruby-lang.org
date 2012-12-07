@@ -35,7 +35,7 @@ Nope, can't do it.
 
 Instance variables are hidden away inside the object. They're not
 terribly hidden, you see them whenever you inspect the object, and there
-are other ways of accessing them, but Ruby uses  the good object-oriented
+are other ways of accessing them, but Ruby uses  the good [object-oriented][]
 approach of keeping data sort-of hidden away.
 
 So what methods do exist for Greeter objects?
@@ -219,4 +219,6 @@ The output should be:
 There are a lot of new things thrown into this final example that we
 [can take a deeper look at][].
 
+
 [can take a deeper look at]: ../4
+[object-oriented]: http://c2.com/cgi/wiki?AlanKaysDefinitionOfObjectOriented
