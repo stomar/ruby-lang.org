@@ -6,7 +6,7 @@ This is a small Ruby tutorial that should take no more than 20 minutes to comple
 
 Ruby comes with a program that will show the results of any Ruby statements you feed it. Playing with Ruby code in interactive sessions like this is a terrific way to learn the language.
 
-Open up IRB (which stands for Interactive Ruby).
+Open up IRB (which stands for Interactive Ruby). This is a program that evaluates each line of code you feed it. 
 
 * If you’re using **Mac OS X** open up `Terminal` and type `irb`, then hit enter.
 * If you’re using **Linux**, open up a shell and type `irb` and hit enter.
