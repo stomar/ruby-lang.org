@@ -92,7 +92,11 @@ What if we want to remember the result of some of this math? Assign the result t
 
 As great as this is for a calculator, we’re getting away from the
 traditional `Hello World` message that beginning tutorials are supposed to focus on…
-[so let’s go back to that][].
+[so let’s go back to that][ruby20min2].
 
-  [download]: en/downloads/
-  [so let’s go back to that]: 2
+## 1 | [2][ruby20min2] | [3][ruby20min3] | [4][ruby20min4]
+
+[download]: en/downloads/
+[ruby20min2]: 2
+[ruby20min3]: 3
+[ruby20min4]: 4

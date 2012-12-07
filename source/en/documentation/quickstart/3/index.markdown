@@ -217,8 +217,11 @@ The output should be:
 ```
 
 There are a lot of new things thrown into this final example that we
-[can take a deeper look at][].
+[can take a deeper look at][ruby20min4].
 
+## [1][ruby20min1] | [2][ruby20min2] | 3 | [4][ruby20min4]
 
-[can take a deeper look at]: ../4
 [object-oriented]: http://c2.com/cgi/wiki?AlanKaysDefinitionOfObjectOriented
+[ruby20min1]: ../
+[ruby20min2]: ../2
+[ruby20min4]: ../4
