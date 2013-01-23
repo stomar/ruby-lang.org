@@ -70,7 +70,7 @@ Type in `thor list` to see all available tasks. We may turn this into a `rubylan
 
 Required dependencies:
 
-    gem install thor rack jekyll rdiscount RedCloth haml compass fancy-buttons rubypants pygments.rb
+    gem install thor rack jekyll rdiscount RedCloth haml compass fancy-buttons rubypants pygments.rb yard
 
 Or if you use Bundler:
 
