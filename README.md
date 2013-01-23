@@ -65,7 +65,7 @@ Type in `thor list` to see all available tasks. We may turn this into a `rubylan
 
 ### "Install" locally
 
-    git clone git@github.com:rubylang/ruby-lang.org.git
+    git clone git://github.com/ruby/ruby-lang.org.git
     cd ruby-lang.org
 
 Required dependencies:
