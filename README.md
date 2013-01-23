@@ -78,7 +78,8 @@ Or if you use Bundler:
 
 There is a `.rvmrc` that will come handy if you are using RVM.
 
-Once every gem is installed:
+Once every gem is installed launch the webserver:
 
     thor admin:preview
-    open http://localhost:4000
+
+Then open `http://localhost:4000/` in your browser.
