@@ -45,7 +45,7 @@ locales:
         - url: downloads
           text: Download Ruby
         - url: documentation/quickstart
-          text: Ruby in 20mn
+          text: Ruby in 20 minutes
         - url: documentation/ruby-from-other-languages
           text: Ruby from other languages
       - title: Explore
@@ -145,7 +145,7 @@ locales:
         - url: downloads
           text: Téléchargez Ruby
         - url: documentation/quickstart
-          text: Ruby en 20mn
+          text: Ruby en 20 minutes
         - url: documentation/ruby-from-other-languages
           text: Vous venez d'un autre langage ?
       - title: Explorez
