@@ -6,7 +6,7 @@
 
 ## Synopsis
 
-This repository contains the new http://www.ruby-lang.org. **The preview is at http://ruby.github.com/ruby-lang.org**. Please note neither the content or the design are definitive at this early stage of the project!
+This repository contains the new http://www.ruby-lang.org. **The preview is at http://ruby.github.com/ruby-lang.org**. Please note neither the content nor the design are definitive at this early stage of the project!
 
 This is the official port approved by Matz and maintained by the current contributors to ruby-lang.org (that is, the Visual Identity Team (VIT) as some used to call us).
 
@@ -19,7 +19,7 @@ ruby-lang.org's content is outdated and the different translations are either ou
 This application is based around a Jekyll instance, but makes use of several other libraries and hand-made tools, in order to ease maintenance and deploy.
 Goals:
 
-* maintenance of ruby-lang.org through Github through this very repository
+* maintenance of ruby-lang.org through GitHub through this very repository
 * **page editions using pull requests or live edits!**
 * **translations sync thanks to git logs**
 
@@ -46,9 +46,9 @@ Hopefully, a brand new content will be written, and a new design could be propos
 This is a git-based workflow. To edit pages, you may:
 
 * fork this project and request your changes to be merged (pull request)
-* use the nice github live-edit-and-pull-request feature, so one is not forced to clone the repository.
+* use the nice GitHub live-edit-and-pull-request feature, so one is not forced to clone the repository.
 
-If you happen to contribute on a regular basis, you'd join the rubylang Github Organization, allowing for committing, live edits and preview deploy.
+If you happen to contribute on a regular basis, you'd join the rubylang GitHub organization, allowing for committing, live edits and preview deploy.
 
 ## Hacking on your local machine
 
@@ -59,7 +59,7 @@ You may clone the repository and run the application on your local machine. See 
 There are command line tasks for creating new pages and news items. Using those tasks prevents you from messing with the metadata, and ensure a few checks.
 
     thor new:page 'en/my/page' 'optional title'
-    thor new:post 'Breaking news !'
+    thor new:post 'Breaking news!'
 
 Type in `thor list` to see all available tasks. We may turn this into a `rubylang` script.
 
