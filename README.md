@@ -48,7 +48,7 @@ This is a git-based workflow. To edit pages, you may:
 * fork this project and request your changes to be merged (pull request)
 * use the nice GitHub live-edit-and-pull-request feature, so one is not forced to clone the repository.
 
-If you happen to contribute on a regular basis, you'd join the rubylang GitHub organization, allowing for committing, live edits and preview deploy.
+If you happen to contribute on a regular basis, you'd join the ruby GitHub organization, allowing for committing, live edits and preview deploy.
 
 ## Hacking on your local machine
 
