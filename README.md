@@ -6,7 +6,7 @@
 
 ## Synopsis
 
-This repository contains the new http://www.ruby-lang.org. **The preview is at http://ruby.github.com/ruby-lang.org**. Please note neither the content nor the design are definitive at this early stage of the project!
+This repository contains the new http://www.ruby-lang.org. **The preview is at http://ruby.github.com/ruby-lang.org**. Please note that neither the content nor the design are definitive at this early stage of the project!
 
 This is the official port approved by Matz and maintained by the current contributors to ruby-lang.org (that is, the Visual Identity Team (VIT) as some used to call us).
 
@@ -46,7 +46,7 @@ Hopefully, a brand new content will be written, and a new design could be propos
 This is a git-based workflow. To edit pages, you may:
 
 * fork this project and request your changes to be merged (pull request)
-* use the nice GitHub live-edit-and-pull-request feature, so one is not forced to clone the repository.
+* use the nice GitHub live-edit-and-pull-request feature, so you are not forced to clone the repository.
 
 If you happen to contribute on a regular basis, you'd join the ruby GitHub organization, allowing for committing, live edits and preview deploy.
 
@@ -56,7 +56,7 @@ You may clone the repository and run the application on your local machine. See 
 
 ### Creating pages and news items
 
-There are command line tasks for creating new pages and news items. Using those tasks prevents you from messing with the metadata, and ensure a few checks.
+There are command line tasks for creating new pages and news items. Using those tasks prevents you from messing with the metadata, and ensures a few checks.
 
     thor new:page 'en/my/page' 'optional title'
     thor new:post 'Breaking news!'
