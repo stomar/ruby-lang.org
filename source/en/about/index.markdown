@@ -39,7 +39,7 @@ use, copy, modify, and distribute.
 
 Initially, Matz looked at other languages to find an ideal syntax.
 Recalling his search, he said, "I wanted a scripting language that was
-more powerful than Perl, and more object-oriented than Python"([1][1]).
+more powerful than Perl, and more object-oriented than Python"([1][matz-interview]).
 
 In Ruby, everything is an object. Every bit of information and code can
 be given their own properties and actions. Object-oriented programming
@@ -90,7 +90,7 @@ the most popular features for newcomers to Ruby from other imperative
 languages like PHP or Visual Basic.
 
 Blocks are inspired by functional languages. Matz said, "in Ruby
-closures, I wanted to respect the Lisp culture"([2][2]).
+closures, I wanted to respect the Lisp culture"([2][closures]).
 
 ``` ruby
     search_engines = %w[Google Yahoo MSN].map do |engine|

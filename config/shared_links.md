@@ -17,5 +17,5 @@
 [license]: /license.txt
 
 # Misc. refs
-[1]: http://www.linuxdevcenter.com/pub/a/linux/2001/11/29/ruby.html
-[2]: http://www.artima.com/intv/closures2.html
+[matz-interview]: http://www.linuxdevcenter.com/pub/a/linux/2001/11/29/ruby.html
+[closures]: http://www.artima.com/intv/closures2.html

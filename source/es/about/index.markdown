@@ -55,7 +55,7 @@ usarlo, copiarlo, modificarlo y distribuirlo.
 
 Inicialmente, Matz buscó en otros lenguajes para encontrar la sintaxis ideal.
 Recordando su búsqueda, dijo, "quería un lenguaje que fuera más poderoso que
-Perl, y más orientado a objetos que Python"([1][1]).
+Perl, y más orientado a objetos que Python"([1][matz-interview]).
 
 En Ruby, todo es un objeto. Se le puede asignar propiedades y acciones a toda
 información y código. La programación orientada a objetos llama a las
@@ -106,7 +106,7 @@ más famosas funcionalidades para los recién llegados a Ruby que vienen de otro
 lenguajes imperativos como PHP o Visual Basic.
 
 Los bloques están inspirados por los lenguajes funcionales. Matz dijo, "en las
-cláusulas de Ruby, quise respetar la cultura de Lisp"([2][2]).
+cláusulas de Ruby, quise respetar la cultura de Lisp"([2][closures]).
 
 ``` ruby
     search_engines = %w[Google Yahoo MSN].map do |engine|

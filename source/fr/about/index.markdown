@@ -61,7 +61,7 @@ distribution sont également libres.
 Initialement, Matz a étudié les autres langages afin de définir une
 syntaxe qui lui serait idéale. Se remémorant cet épisode, il nous
 rapportait : « je voulais un langage de script plus puissant que Perl,
-et plus orienté objet que Python([1][])".
+et plus orienté objet que Python([1][matz-interview])".
 
 Dans Ruby, le paradigme de base est que tout y est un objet. Chaque
 entité d’information et de code peut recevoir ses propres propriétés et
@@ -123,7 +123,7 @@ habitués à des langages impératifs comme PHP ou Visual Basic.
 
 Les blocs trouvent leur inspiration dans les langages fonctionnels. Matz
 a dit à ce propos : « en créant les *closures* de Ruby, je souhaitais
-respecter la voie tracée par Lisp([4][]). »
+respecter la voie tracée par Lisp([2][closures]). »
 
 ``` ruby
     search_engines = %w[Google Yahoo MSN].map do |engine|
