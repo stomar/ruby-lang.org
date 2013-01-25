@@ -32,7 +32,7 @@ Hopefully, a brand new content will be written, and a new design could be propos
 * The Jekyll application (templates, basic structure, helpers).
 * A little design refresh based on Octopress excellent theme.
 * A few pages (check under `en` and `fr` subdirectories), but more is coming really soon.
-* Several discussions about what should be done in the Issues section (go check it out!).
+* Several discussions about what should be done in the [Issues](https://github.com/ruby/ruby-lang.org/issues) section (go check it out!).
 
 ### What's missing so far?
 
