@@ -27,9 +27,9 @@ module Jekyll
 
     def render(context)
       output = super
-      if output.join =~ /\{"\s*(.+)\s*"\}/
+      if output =~ /\{"\s*(.+?)\s*"\}/m
         @quote = $1
-        "<span class='has-pullquote' data-pullquote='#{@quote}'>#{output.join.gsub(/\{"\s*|\s*"\}/, '')}</span>"
+        "<span class='has-pullquote' data-pullquote='#{@quote}'>#{output.gsub(/\{"\s*|\s*"\}/, '')}</span>"
       else
         return "Surround your pullquote like this {\" text to be quoted \"}"
       end

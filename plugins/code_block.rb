@@ -72,7 +72,7 @@ module Jekyll
 
     def render(context)
       output = super
-      code = super.join
+      code = super
       source = "<div><figure role=code>"
       source += @caption if @caption
       source = context['pygments_prefix'] + source if context['pygments_prefix']
